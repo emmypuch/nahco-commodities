@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import NahcoLogo from "../../assets/svg/nahco-logo.svg";
-import Hero from "../hero-section/Hero";
 import "./Header.css";
 
 const Header = () => {
@@ -17,9 +16,9 @@ const Header = () => {
 
   return (
     <>
-      <nav className="flex justify-between bg-[#263C28] px-[20px] md:px-[50px] pt-[30px] items-center">
+      <nav className="flex justify-between bg-[#263C28] px-[20px] md:px-[50px] pb-[20px] pt-[30px] items-center">
         <div className="logo">
-          <img src={NahcoLogo} alt="Logo" />
+          <img src={NahcoLogo} alt="Logo" className="md:w-full w-[100px]" />
         </div>
 
         {/* Hamburger button for small screen */}
@@ -116,7 +115,6 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <Hero />
     </>
   );
 };

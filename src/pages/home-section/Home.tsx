@@ -6,11 +6,13 @@ import Metric from "../../components/metric-section/Metric";
 import Global from "../../components/global-section/Global";
 import Cta from "../../components/cta-section/Cta";
 import Footer from "../../components/footer/Footer";
+import Hero from "../../components/hero-section/Hero";
 
 const Home = () => {
   return (
     <>
       <Header />
+      <Hero />
       <TrustContainer />
       <Services />
       <Partnership />
