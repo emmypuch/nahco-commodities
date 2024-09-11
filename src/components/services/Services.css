@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+p {
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.card-container {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.card-container:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-element.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 425px) {
+    h3 {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.price-button span, h2 {
+    font-family: "Inter", sans-serif;
+}
+
+.price-button {
+    border: 1px solid #15803D;
+    border-radius: 24px;
+    padding: 10px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    width: 328px;
+    height: 38px;
+}
+
+.price-button span {
+    display: flex;
+}
+
+.positive {
+    color: #4ADE80;
+}
+
+.negative {
+    color: #F87171;
+}

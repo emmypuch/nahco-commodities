@@ -1,0 +1,52 @@
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-element.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-container {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    p.paragraph {
+        font-size: 12px;
+    }
+
+    div.company-img {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    div.container {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    div.container {
+        display: flex;
+        flex-direction: column;
+        height: 630px;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .trust-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trust-image img {
+        width: 300px;
+    }
+}
