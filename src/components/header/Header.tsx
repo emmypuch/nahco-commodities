@@ -45,7 +45,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Navigation link for large screen */}
+        {/* Navigation link  large screen */}
         <ul className="hidden md:flex gap-[50px] justify-center items-center">
           {navLinks.map((link, index) => (
             <li key={index} className="text-[14px] font-[400]">
