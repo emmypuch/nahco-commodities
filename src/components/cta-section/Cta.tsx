@@ -7,7 +7,24 @@ import Phone from "../../assets/svg/phone.svg";
 import Location from "../../assets/svg/location-line.svg";
 import { useEffect } from "react";
 
-const Cta = () => {
+interface ContactItemProps {
+  iconSrc: string;
+  altText: string;
+  text: string;
+}
+
+const ContactItem: React.FC<ContactItemProps> = ({
+  iconSrc,
+  altText,
+  text,
+}) => (
+  <li className="flex fade-in-element items-center text-[16px] font-[400] text-[#4B5563]">
+    <img src={iconSrc} alt={altText} className="mr-2" />
+    {text}
+  </li>
+);
+
+const Cta: React.FC = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-in-element");
 
@@ -34,48 +51,50 @@ const Cta = () => {
   }, []);
 
   return (
-    <>
-      <div className="px-[30px] md:px-[70px] py-[30px]">
-        <div className="cta-container flex justify-between">
-          <div className="flex justify-center items-center">
-            <div>
-              <h2 className="text-[36px] font-[600] fade-in-element text-[#166534] mt-6 md:mt-0">
-                Your Gateway to Global Success.
-              </h2>
-              <h2 className="text-[36px] font-[600] fade-in-element text-[#166534]">
-                Start the Conversation Today
-              </h2>
-              <ul className="mt-6 space-y-4 fade-in-element">
-                <li className="flex items-center text-[16px] font-[400] text-[#4B5563]">
-                  <img src={Email} alt="Email" className="mr-2" />
-                  info@nahcocommodities.com
-                </li>
-                <li className="flex items-center text-[16px] font-[400] text-[#4B5563]">
-                  <img src={Twitter} alt="Twitter" className="mr-2" />X
-                  (Formerly Twitter) @nahcocommodities
-                </li>
-                <li className="flex items-center text-[16px] font-[400] text-[#4B5563]">
-                  <img src={Instagram} alt="Instagram" className="mr-2" />
-                  Instagram @nahcocommodities
-                </li>
-                <li className="flex items-center text-[16px] font-[400] text-[#4B5563]">
-                  <img src={Phone} alt="Phone" className="mr-2" />
-                  +234 818 888 1529
-                </li>
-                <li className="flex items-center text-[16px] font-[400] text-[#4B5563]">
-                  <img src={Location} alt="Location" className="mr-2 mb-4" />
-                  NAHCO Export Packaging & Processing Center, <br /> Murtala
-                  Muhammed International Airport Road, Ikeja, Lagos, Nigeria.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="fade-in-element">
-            <img src={TrustImg} alt="" />
+    <div className="px-[30px] md:px-[70px] py-[30px]">
+      <div className="cta-container flex justify-between">
+        <div className="flex justify-center items-center">
+          <div>
+            <h2 className="text-[36px] font-[600] fade-in-element text-[#166534] mt-6 md:mt-0">
+              Your Gateway to Global Success.
+            </h2>
+            <h2 className="text-[36px] font-[600] fade-in-element text-[#166534]">
+              Start the Conversation Today
+            </h2>
+            <ul className="mt-6 space-y-4 fade-in-element">
+              <ContactItem
+                iconSrc={Email}
+                altText="Email"
+                text="info@nahcocommodities.com"
+              />
+              <ContactItem
+                iconSrc={Twitter}
+                altText="Twitter"
+                text="X (Formerly Twitter) @nahcocommodities"
+              />
+              <ContactItem
+                iconSrc={Instagram}
+                altText="Instagram"
+                text="Instagram @nahcocommodities"
+              />
+              <ContactItem
+                iconSrc={Phone}
+                altText="Phone"
+                text="+234 818 888 1529"
+              />
+              <ContactItem
+                iconSrc={Location}
+                altText="Location"
+                text="NAHCO Export Packaging & Processing Center, Murtala Muhammed International Airport Road, Ikeja, Lagos, Nigeria."
+              />
+            </ul>
           </div>
         </div>
+        <div className="fade-in-element">
+          <img src={TrustImg} alt="Trust" />
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
