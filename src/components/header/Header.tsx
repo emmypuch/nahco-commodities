@@ -17,12 +17,12 @@ const Header = () => {
 
   return (
     <>
-      <nav className="flex justify-between bg-[#263C28] px-[50px] pt-[30px] items-center">
+      <nav className="flex justify-between bg-[#263C28] px-[20px] md:px-[50px] pt-[30px] items-center">
         <div className="logo">
           <img src={NahcoLogo} alt="Logo" />
         </div>
 
-        {/* Hamburger button  small screen */}
+        {/* Hamburger button for small screen */}
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
@@ -45,7 +45,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Navigation link  large screen */}
+        {/* Navigation links for large screen */}
         <ul className="hidden md:flex gap-[50px] justify-center items-center">
           {navLinks.map((link, index) => (
             <li key={index} className="text-[14px] font-[400]">

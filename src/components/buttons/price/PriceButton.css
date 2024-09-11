@@ -26,3 +26,9 @@
 .negative {
     color: #F87171;
 }
+
+@media screen and (max-width: 320px) {
+    .price-button {
+        width: 280px;
+    }
+}

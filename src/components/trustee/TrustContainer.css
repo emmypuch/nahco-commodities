@@ -9,6 +9,15 @@
     transform: translateY(0);
 }
 
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+}
+
 .text-container {
     width: 50%;
 }
@@ -33,7 +42,7 @@
     div.container {
         display: flex;
         flex-direction: column;
-        height: 630px;
+        height: 690px;
     }
 
     .text-container {
@@ -46,7 +55,7 @@
         align-items: center;
     }
 
-    .trust-image img {
-        width: 300px;
+    img.trustImg{
+        width: 500px;
     }
 }

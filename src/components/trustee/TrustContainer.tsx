@@ -34,10 +34,10 @@ const TrustContainer = () => {
   }, []);
 
   return (
-    <div className="container relative bg-[#1D2E1F] px-[50px] w-full py-[50px] h-[500px] flex items-center justify-between">
-      <div className="relative z-10 w-[50%] fade-in-element">
+    <div className="container relative bg-[#1D2E1F] px-[50px] w-full py-[50px] h-[600px] flex items-center justify-between">
+      <div className="relative z-10 w-[70%] md:w-[50%] fade-in-element">
         <div className="trust-image flex justify-start">
-          <img src={TrustImg} alt="Trust Icon" className="w-[450px]" />
+          <img src={TrustImg} alt="Trust Icon" className="trustImg" />
         </div>
       </div>
 
