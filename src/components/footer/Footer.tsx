@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
           <img src={NahcoLogo} alt="" />
         </div>
         <div className="text">
-          <p className="text-[#91B29A] text-[16px] mt-4 font-[400]">
+          <p className="text-[#91B29A] text-[14px] md:text-[16px] mt-4 font-[400]">
             © {currentYear} NAHCO. All rights reserved.
           </p>
         </div>
