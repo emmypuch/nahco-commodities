@@ -39,10 +39,14 @@
 }
 
 @media screen and (max-width: 425px) {
-    div.container {
+    div.container-context {
         display: flex;
         flex-direction: column;
-        height: 690px;
+        
+    }
+
+    div.container {
+        height: 710px;
     }
 
     .text-container {
@@ -57,5 +61,8 @@
 
     img.trustImg{
         width: 500px;
+    }
+    p.paragraph {
+        margin-top: 20px;
     }
 }

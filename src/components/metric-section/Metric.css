@@ -2,17 +2,18 @@
 
 p {
     font-family: "Livvic", sans-serif;
-    font-weight: 400;
 }
 
-.livvic-medium {
-    font-family: "Livvic", sans-serif;
-    font-weight: 500;
-}
 
 h2 {
     font-family: "Livvic", sans-serif;
-    font-weight: 700;
+}
+
+.numbers-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;
 }
 
 .fade-in-element {
@@ -26,15 +27,7 @@ h2 {
     transform: translateY(0);
 }
 
-@media screen and (max-width: 768px) {
-    h2.hero-heading {
-        font-size: 36px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-    }
+.metric-card {
+    position: relative;
+    z-index: 2;
 }
