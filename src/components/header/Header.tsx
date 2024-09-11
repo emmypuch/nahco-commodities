@@ -22,7 +22,7 @@ const Header = () => {
           <img src={NahcoLogo} alt="Logo" />
         </div>
 
-        {/* Hamburger button for small screens */}
+        {/* Hamburger button for small screen */}
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
