@@ -4,6 +4,7 @@ import Services from "../../components/service-section/Services";
 import Partnership from "../../components/partnership/Partnership";
 import Metric from "../../components/metric-section/Metric";
 import Global from "../../components/global-section/Global";
+import Cta from "../../components/cta-section/CTA";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Partnership />
       <Metric />
       <Global />
+      <Cta />
     </>
   );
 };

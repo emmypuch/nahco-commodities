@@ -87,7 +87,7 @@ const Global = () => {
           <img src={Location} alt="World Map" />
         </div>
 
-        <div className="country-lists fade-in-element  flex justify-between items-start pl-[70px] py-[30px] flex-wrap">
+        <div className="country-lists fade-in-element flex justify-between items-start pl-[70px] py-[30px] flex-wrap">
           <CountryList region="EUROPE" countries={europeCountries} />
           <CountryList
             region="NORTH AMERICA"
