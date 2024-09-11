@@ -3,6 +3,7 @@ import TrustContainer from "../../components/trustee/TrustContainer";
 import Services from "../../components/service-section/Services";
 import Partnership from "../../components/partnership/Partnership";
 import Metric from "../../components/metric-section/Metric";
+import Global from "../../components/global-section/Global";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Services />
       <Partnership />
       <Metric />
+      <Global />
     </>
   );
 };

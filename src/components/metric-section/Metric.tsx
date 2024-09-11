@@ -35,7 +35,7 @@ const Metric = () => {
           <h2 className="text-[#166534] font-[700] text-[36px] text-center">
             Measuring Impact
           </h2>
-          <p className="text-center font-[400] text-[20px] text-[#4B5563] mt-6">
+          <p className="text-center font-[400] text-[16px] md:text-[20px] text-[#4B5563] mt-6">
             By tracking these metrics, we demonstrate our commitment to
             accountability, <br /> effectiveness, and driving positive change in
             the global marketplace.
@@ -43,7 +43,7 @@ const Metric = () => {
         </div>
         <div className="flex justify-center items-center min-h-screen">
           <div className="metric-card fade-in-element h-[617px] w-[1200px] rounded-[24px] border border-[#E5E7EB] p-[24px]">
-            <div className="flex justify-between">
+            <div className="metric-content flex justify-between">
               <div className="numbers-container fade-in-element">
                 <div className="flex justify-between gap-6">
                   <div>
@@ -81,7 +81,7 @@ const Metric = () => {
                       8
                     </p>
                   </div>
-                  <div className="ml-[30px]">
+                  <div className="ml-0 md:ml-[30px]">
                     <p className="text-[#3B6D3E] font-[500] text-[18px] text-center">
                       Processing Efficiency
                     </p>
@@ -105,7 +105,7 @@ const Metric = () => {
                       50
                     </p>
                   </div>
-                  <div className="ml-[30px]">
+                  <div className="ml-0 md:ml-[30px]">
                     <p className="text-[#3B6D3E] font-[500] text-[18px]">
                       Order Fulfillment Rate
                     </p>
@@ -118,7 +118,7 @@ const Metric = () => {
                   </div>
                 </div>
               </div>
-              <div className="fade-in-element">
+              <div className="metric-img fade-in-element">
                 <img src={MetricImage} alt="Metric" />
               </div>
             </div>
