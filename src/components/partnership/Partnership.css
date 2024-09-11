@@ -9,7 +9,7 @@ h2 {
     font-family: "Livvic", sans-serif;
 }
 
-.container {
+div.container-partnership {
     position: relative;
     width: 100vw;
     height: 600px;
@@ -44,7 +44,6 @@ h2 {
 }
 
 .trust-line {
-    bottom: 0;
     right: 0;
     opacity: 0.7;
 }

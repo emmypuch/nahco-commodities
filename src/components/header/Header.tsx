@@ -7,9 +7,9 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
+    { name: "About Us", path: "/about" },
+    { name: "Our Services", path: "/service" },
+    { name: "Our Global Reach", path: "/global" },
   ];
 
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
@@ -17,9 +17,9 @@ const Header = () => {
   return (
     <>
       <nav className="flex justify-between bg-[#263C28] px-[20px] md:px-[50px] pb-[20px] pt-[30px] items-center">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src={NahcoLogo} alt="Logo" className="md:w-full w-[100px]" />
-        </div>
+        </Link>
 
         {/* Hamburger button for small screen */}
         <div className="md:hidden flex items-center">

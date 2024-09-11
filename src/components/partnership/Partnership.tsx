@@ -31,7 +31,7 @@ const Partnership = () => {
   }, []);
 
   return (
-    <div className="container bg-[#263c28]">
+    <div className="container-partnership bg-[#263c28]">
       <div className="fade-in-element background-images">
         <img className="hero-vector" src={Herovector} alt="Hero vector" />
         <img className="trust-line" src={TrustLine} alt="Trust line" />

@@ -43,7 +43,7 @@ const Hero = () => {
             />
           </div>
 
-          <div className="wrapper relative flex justify-between items-center px-[20px] md:px-[50px] py-[70px]">
+          <div className="wrapper-hero relative flex justify-between items-center px-[20px] md:px-[50px] py-[70px]">
             <div className="fade-in-element">
               <h2 className="hero-heading text-[56px] font-bold text-[#E4CAA4] md:mt-0 mt-4 max-w-[600px] leading-tight">
                 Your Gateway to Global Agricultural Exports

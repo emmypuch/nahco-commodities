@@ -2,17 +2,10 @@
 
 p {
     font-family: "Livvic", sans-serif;
-    font-weight: 400;
-}
-
-.livvic-medium {
-    font-family: "Livvic", sans-serif;
-    font-weight: 500;
 }
 
 h2 {
     font-family: "Livvic", sans-serif;
-    font-weight: 700;
 }
 
 .fade-in-element {
@@ -33,7 +26,7 @@ h2 {
 }
 
 @media screen and (max-width: 425px) {
-    .wrapper {
+    .wrapper-hero {
         display: flex;
         flex-direction: column-reverse;
     }
