@@ -30,14 +30,21 @@ const NahcoCard = () => {
             <p className="text-[#667085] text-[14px] md:text-[16px] font-[400] mt-4">
               Our vision is to become the trusted partner that businesses rely
               on to navigate the complexities of global commerce. We achieve
-              this by focusing on three core pillars: Innovation: We
-              continuously seek innovative solutions to streamline export
+              this by focusing on three core pillars:
+            </p>
+            <p className="text-[#667085] text-[14px] md:text-[16px] font-[400] mt-4">
+              <span className="text-[#263C28]">Innovation: </span>
+              We continuously seek innovative solutions to streamline export
               processes and stay ahead of industry trends, ensuring our clients'
-              success in the global market. Customization: We understand that
-              every business is unique. We tailor our solutions to your specific
-              needs and products, ensuring a successful export journey.
-              Reliability: We are committed to providing reliable, high-quality
-              services that consistently meet and exceed expectations.
+              success in the global market.
+            </p>
+            <p className="text-[#667085] text-[14px] md:text-[16px] font-[400] mt-4">
+              <span className="text-[#263C28]">Customization: </span>
+              We understand that every business is unique. We tailor our
+              solutions to your specific needs and products, ensuring a
+              successful export journey. Reliability: We are committed to
+              providing reliable, high-quality services that consistently meet
+              and exceed expectations.
             </p>
           </div>
         </div>
