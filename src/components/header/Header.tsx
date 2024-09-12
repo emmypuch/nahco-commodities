@@ -59,14 +59,12 @@ const Header = () => {
         </ul>
 
         <ul className="hidden md:flex justify-center items-center">
-          <li>
-            <a
-              href="#"
-              className="btn border border-[#C8C0B4] rounded-full px-4 py-3 text-[14px] text-white font-[400] flex items-center justify-center transition-colors duration-300 hover:bg-[#C8C0B4] hover:text-[#263C28] focus:outline-none focus:ring-2 focus:ring-[#E4CAA4]"
-            >
-              Contact Us
-            </a>
-          </li>
+          <Link
+            to="/contact"
+            className="btn border border-[#C8C0B4] rounded-full px-4 py-3 text-[14px] text-white font-[400] flex items-center justify-center transition-colors duration-300 hover:bg-[#C8C0B4] hover:text-[#263C28] focus:outline-none focus:ring-2 focus:ring-[#E4CAA4]"
+          >
+            Contact Us
+          </Link>
         </ul>
 
         {/* Mobile menu */}
@@ -103,15 +101,12 @@ const Header = () => {
                 </Link>
               </li>
             ))}
-
-            <li className="py-2 list-none">
-              <a
-                href="#"
-                className="btn border border-[#C8C0B4] rounded-full px-4 py-3 text-[14px] text-white font-[400] flex items-center justify-center transition-colors duration-300 hover:bg-[#C8C0B4] hover:text-[#263C28] focus:outline-none focus:ring-2 focus:ring-[#E4CAA4]"
-              >
-                Contact Us
-              </a>
-            </li>
+            <Link
+              to="/contact"
+              className="btn border border-[#C8C0B4] rounded-full px-4 py-3 text-[14px] text-white font-[400] flex items-center justify-center transition-colors duration-300 hover:bg-[#C8C0B4] hover:text-[#263C28] focus:outline-none focus:ring-2 focus:ring-[#E4CAA4]"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </nav>
