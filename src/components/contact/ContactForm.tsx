@@ -60,7 +60,7 @@ const ContactForm = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-6 w-full md:w-[800px] h-[771px] rounded-lg shadow-md mt-8 overflow-y-auto"
+          className="bg-white p-6 w-full md:w-[800px] scrollable-content overflow-x-auto max-h-[500px] rounded-lg shadow-md mt-8 overflow-y-auto"
         >
           <div className="grid grid-cols-2 gap-6 mb-6">
             <div>
