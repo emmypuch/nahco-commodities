@@ -80,7 +80,7 @@ const Global = () => {
   return (
     <>
       <div className="bg-[#263C28] px-[50px] py-[30px]">
-        <h2 className="fade-in-element text-[#B19D7F] text-[36px] font-[600] text-center">
+        <h2 className="fade-in-element text-[#B19D7F] text-[30px] md:text-[36px] font-[600] text-center">
           Our Global Reach
         </h2>
         <div className="flex fade-in-element  justify-center items-center mt-8">

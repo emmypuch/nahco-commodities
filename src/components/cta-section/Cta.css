@@ -26,4 +26,14 @@ h2 {
         display: flex;
         flex-direction: column-reverse;
     }
+
+    div.cta-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.cta-image img {
+        width: 250px;
+    }
 }
