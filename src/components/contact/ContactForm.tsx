@@ -53,7 +53,7 @@ const ContactForm = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen py-[30px]">
-      <div className="px-[50px] py-[30px]">
+      <div className="px-[20px] md:px-[50px] py-[30px]">
         <div className="fade-in-element">
           <BackButton />
         </div>
