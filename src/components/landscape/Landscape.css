@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
-p, li {
+li {
     font-family: "Inter", sans-serif;
 }
 
-h4, h2 {
+
+h2 {
     font-family: "Livvic", sans-serif;
 }
 
@@ -19,23 +20,4 @@ h4, h2 {
 .fade-in-element.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-@media screen and (max-width: 768px) {
-    div.nahco-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    div.nahco-card {
-        width: 350px;
-        height: 580px;
-    }
-
-    div.innovation-card {
-        display: flex;
-        flex-wrap: wrap;
-    }
 }

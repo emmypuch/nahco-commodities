@@ -33,7 +33,7 @@ const NahcoCard = () => {
     <>
       <div className="px-[50px] py-[30px]">
         <div className="nahco-wrapper flex justify-center items-center gap-4">
-          <div className="nahco-card p-6 border border-[#E5E7EB] rounded-[8px] h-[529px] w-[583px]">
+          <div className="nahco-card p-6 border border-[#E5E7EB] rounded-[8px] md:h-[529px] w-[583px]">
             <img src={Plant} alt="" />
             <h4 className="text-[20px] fade-in-element md:text-[24px] font-[700] text-[#263C28] mt-4">
               Our Mission: Unleashing Global Potential

@@ -106,12 +106,12 @@ const Footer: React.FC = () => {
       <div className="divider flex justify-center items-center">
         <img src={Divider} alt="" />
       </div>
-      <div className="rights flex justify-between px-[50px] py-[30px] fade-in-element">
+      <div className="rights flex justify-between px-[0px] gap-4 md:gap-0 md:px-[50px] py-[30px] fade-in-element">
         <div className="">
-          <img src={NahcoLogo} alt="" />
+          <img src={NahcoLogo} alt="" className="w-[100px] md:w-full" />
         </div>
         <div className="text">
-          <p className="text-[#91B29A] text-[14px] md:text-[16px] mt-4 font-[400]">
+          <p className="text-[#91B29A] text-[13px] md:text-[16px] mt-0 md:mt-4 font-[400]">
             © {currentYear} NAHCO. All rights reserved.
           </p>
         </div>
