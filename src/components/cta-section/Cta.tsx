@@ -10,7 +10,7 @@ import { useEffect } from "react";
 interface ContactItemProps {
   iconSrc: string;
   altText: string;
-  text: string;
+  text: React.ReactNode;
 }
 
 const ContactItem: React.FC<ContactItemProps> = ({
@@ -62,26 +62,60 @@ const Cta: React.FC = () => {
               Start the Conversation Today
             </h2>
             <ul className="mt-6 space-y-4 fade-in-element">
+              {/* Email */}
               <ContactItem
                 iconSrc={Email}
                 altText="Email"
-                text="info@nahcocommodities.com"
+                text={
+                  <a
+                    href="mailto:info@nahcocommodities.com"
+                    className="hover:underline"
+                  >
+                    info@nahcocommodities.com
+                  </a>
+                }
               />
+              {/* Twitter */}
               <ContactItem
                 iconSrc={Twitter}
                 altText="Twitter"
-                text="X (Formerly Twitter) @nahcocommodities"
+                text={
+                  <a
+                    href="https://twitter.com/nahcocommodities"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    X (Formerly Twitter) @nahcocommodities
+                  </a>
+                }
               />
+              {/* Instagram */}
               <ContactItem
                 iconSrc={Instagram}
                 altText="Instagram"
-                text="Instagram @nahcocommodities"
+                text={
+                  <a
+                    href="https://instagram.com/nahcocommodities"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    Instagram @nahcocommodities
+                  </a>
+                }
               />
+              {/* Phone */}
               <ContactItem
                 iconSrc={Phone}
                 altText="Phone"
-                text="+234 818 888 1529"
+                text={
+                  <a href="tel:+2348188881529" className="hover:underline">
+                    +234 818 888 1529
+                  </a>
+                }
               />
+              {/* Location */}
               <ContactItem
                 iconSrc={Location}
                 altText="Location"

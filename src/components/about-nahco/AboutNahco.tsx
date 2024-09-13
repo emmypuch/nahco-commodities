@@ -24,7 +24,7 @@ const AboutNahco = () => {
               </p>
             </div>
 
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.7]"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.62]"></div>
           </div>
         </div>
         <NahcoCard />

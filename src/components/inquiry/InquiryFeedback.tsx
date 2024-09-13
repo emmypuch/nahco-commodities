@@ -70,13 +70,19 @@ const InquiryFeedback = () => {
             </h4>
             <p className="text-[14px] md:text-[18px] text-[#6b7280] font-[400] mt-4">
               Contact us at{" "}
-              <span className="text-[#374151] font-[500]">
-                +234 818 888 1529
-              </span>{" "}
+              <a
+                href="tel:+2348188881529"
+                className="hover:underline text-[#374151] font-[500]"
+              >
+                +234 818 888 1529{" "}
+              </a>
               or{" "}
-              <span className="text-[#374151] font-[500]">
+              <a
+                href="mailto:info@nahcocommodities.com"
+                className="hover:underline text-[#374151] font-[500]"
+              >
                 info@nahcocommodities.com
-              </span>
+              </a>
             </p>
 
             <div className="mt-6">
