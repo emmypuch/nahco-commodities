@@ -1,8 +1,9 @@
-import FooterImg from "../../assets/svg/footer.svg";
+import FooterImg from "../../assets/svg/footer-image.svg";
 import Divider from "../../assets/svg/divider.svg";
 import NahcoLogo from "../../assets/svg/nahco-logo.svg";
 import { useEffect } from "react";
 import "./Footer.css";
+import ServiceButton from "../buttons/ServiceButton";
 
 interface Link {
   href: string;
@@ -91,12 +92,35 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#263C28] px-[50px] py-[30px]">
-      <div className="newsletter flex justify-center items-center">
-        <div>
-          <img src={FooterImg} alt="" />
+    <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[30px]">
+      <div className="newsletter flex justify-center items-center w-full">
+        <div className="relative footer-overlay w-full max-w-[1440px]">
+          <img
+            src={FooterImg}
+            alt="Newsletter Background"
+            className="absolute top-0 left-0 rounded-[24px] w-full h-full object-cover"
+          />
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 w-full h-full p-6 md:p-12">
+            <h2 className="text-[#F0FDF4] fade-in-element text-[24px] md:text-[48px] font-[600] leading-tight text-center md:text-left">
+              Subscribe to Our <br /> Newsletter
+            </h2>
+            <div className="flex fade-in-element flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 w-full md:w-auto">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className="bg-[#121C07] text-[#D0D5DD] rounded-[32px] h-[48px] w-full md:w-[287px] px-[15px] text-[12px] md:text-[14px] font-[400]"
+              />
+              <ServiceButton
+                backgroundColor="#FBFAF9"
+                textColor="#166534"
+                hoverColor="#F0FDF4"
+              />
+            </div>
+          </div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-[24px]"></div>
         </div>
       </div>
+
       <div className="links flex justify-between px-[20px] md:px-[50px] fade-in-element py-[30px]">
         <LinkList title="Company" links={companyLinks} />
         <LinkList title="Resources" links={resourcesLinks} />

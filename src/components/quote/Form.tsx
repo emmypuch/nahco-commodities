@@ -36,6 +36,7 @@ const Form = () => {
     companyName: "",
     phoneNumber: "",
     message: "",
+    countryCode: "",
   });
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -44,6 +45,15 @@ const Form = () => {
     setFormData({
       ...formData,
       [name]: value,
+    });
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleCountryChange = (e: any) => {
+    const { value } = e.target;
+    setFormData({
+      ...formData,
+      countryCode: value,
     });
   };
 
@@ -128,15 +138,30 @@ const Form = () => {
               <label className="block text-[#111827]   text-[12px] md:text-[14px] font-[500]">
                 Phone Number
               </label>
-              <input
-                type="tel"
-                name="phoneNumber"
-                placeholder="+234 201-555-0123"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                className="mt-1 p-2 block w-full  text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
-                required
-              />
+              <div className="relative">
+                <select
+                  name="countryCode"
+                  value={formData.countryCode}
+                  onChange={handleCountryChange}
+                  className="absolute inset-y-0 left-0  border-[#D1D5DB] text-[#6B7280] bg-white rounded-l z-10"
+                >
+                  <option value="NG" data-flag="🇳🇬">
+                    🇳🇬 NG
+                  </option>
+                  <option value="US" data-flag="🇺🇸">
+                    🇺🇸 US
+                  </option>
+                </select>
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="+234 201-555-0123"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  className="pl-16 pr-3 py-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
+                  required
+                />
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-6 mb-6">
@@ -160,7 +185,7 @@ const Form = () => {
               </div>
 
               <div>
-                <label className="block   text-[#111827] text-[12px] md:text-[14px] font-[500]">
+                <label className="block text-[#111827] text-[11px] md:text-[14px] font-[500]">
                   Quantity (112MT Minimum)
                 </label>
                 <input

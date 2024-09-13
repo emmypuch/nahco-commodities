@@ -110,7 +110,11 @@ const Services = () => {
           ))}
         </div>
         <div className="flex justify-center items-center mt-8">
-          <ServiceButton />
+          <ServiceButton
+            backgroundColor="#315033"
+            textColor="#E1CFB4"
+            hoverColor="#8c7d6e"
+          />
         </div>
       </div>
     </>

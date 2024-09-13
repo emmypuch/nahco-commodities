@@ -35,6 +35,7 @@ const ContactForm = () => {
     companyName: "",
     phoneNumber: "",
     message: "",
+    countryCode: "",
   });
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -43,6 +44,15 @@ const ContactForm = () => {
     setFormData({
       ...formData,
       [name]: value,
+    });
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleCountryChange = (e: any) => {
+    const { value } = e.target;
+    setFormData({
+      ...formData,
+      countryCode: value,
     });
   };
 
@@ -64,7 +74,7 @@ const ContactForm = () => {
           >
             <div className="grid grid-cols-2 gap-6 mb-6">
               <div>
-                <label className="blocktext-[#111827] text-[12px] md:text-[14px] font-[500]">
+                <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                   First Name
                 </label>
                 <input
@@ -122,19 +132,34 @@ const ContactForm = () => {
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 relative">
               <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                 Phone Number
               </label>
-              <input
-                type="tel"
-                name="phoneNumber"
-                placeholder="+234 201-555-0123"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                className="mt-1 p-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
-                required
-              />
+              <div className="relative">
+                <select
+                  name="countryCode"
+                  value={formData.countryCode}
+                  onChange={handleCountryChange}
+                  className="absolute inset-y-0 left-0  border-[#D1D5DB] text-[#6B7280] bg-white rounded-l z-10"
+                >
+                  <option value="NG" data-flag="🇳🇬">
+                    🇳🇬 NG
+                  </option>
+                  <option value="US" data-flag="🇺🇸">
+                    🇺🇸 US
+                  </option>
+                </select>
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder="+234 201-555-0123"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  className="pl-16 pr-3 py-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
+                  required
+                />
+              </div>
             </div>
 
             <div className="mb-6">
@@ -150,7 +175,7 @@ const ContactForm = () => {
               />
             </div>
 
-            <p className="text-[10px] md:text-[12px] font-[400] fade-in-element  text-[#6B7280] mb-4">
+            <p className="text-[10px] md:text-[12px] font-[400] fade-in-element text-[#6B7280] mb-4">
               By pressing the submit button, I agree to Rollpay contacting me by
               email and/or phone to share opportunities exclusively available to
               Select or Enterprise customers. I also understand that any
@@ -160,7 +185,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="bg-[#263C28] fade-in-element  text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition"
+              className="bg-[#263C28] fade-in-element text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition"
             >
               Send
             </button>
