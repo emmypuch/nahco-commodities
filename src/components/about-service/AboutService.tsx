@@ -8,7 +8,7 @@ import Worktool from "../../assets/svg/worktool.svg";
 import Tool from "../../assets/svg/tool.svg";
 import { useEffect } from "react";
 import "./AboutService.css";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "./service-card/ServiceCard";
 
 const services = [
   {
@@ -109,7 +109,7 @@ const AboutService = () => {
           </div>
         </div>
 
-        <div className="mt-[40px] mb-[40px] md:px-0 px-6">
+        <div className="mt-[40px] mb-[40px] md:px-0 px-2">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

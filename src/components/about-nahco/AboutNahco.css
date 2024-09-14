@@ -44,8 +44,8 @@ h4, h2 {
     }
 
     .service-images-layout {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 30px;
+        padding-right: 30px;
     }
         
     .service-images-layout img {
@@ -55,7 +55,7 @@ h4, h2 {
         
     .service-images-layout .relative {
         width: 100%;
-        height: auto;
+        height: 330px;
     }
         
     .service-images-layout .text-center {

@@ -1,4 +1,6 @@
-import GroupLine from "../../assets/svg/group-line.svg";
+import React, { useEffect, useRef } from "react";
+import GroupLine from "../../../assets/svg/group-line.svg";
+import "./ServiceCard.css";
 
 interface ServiceCardProps {
   image: string;
@@ -13,8 +15,36 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
 }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-in-element");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
-    <div className="service-images-layout flex flex-col justify-center md:flex-row gap-6 px-6 md:px-0 mb-0">
+    <div
+      ref={cardRef}
+      className="service-images-layout flex flex-col justify-center md:flex-row gap-6 px-6 md:px-0 mb-0 fade-in-element"
+    >
       <div className="flex justify-center items-center w-full md:w-[583px] md:h-[563px]">
         <img
           src={image}
@@ -27,7 +57,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <img src={GroupLine} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-20 flex flex-col justify-center items-center h-full p-4">
-          <h3 className="text-[#F9FAFB]  text-[16px] md:text-[20px] font-[600] mb-2 text-center">
+          <h3 className="text-[#F9FAFB] text-[16px] md:text-[20px] font-[600] mb-2 text-center">
             {title}
           </h3>
           <p className="text-[#E5E7EB] font-[400] text-[12px] md:text-[16px] text-center">
