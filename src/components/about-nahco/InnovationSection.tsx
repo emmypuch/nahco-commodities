@@ -95,47 +95,55 @@ const InnovationSection = () => {
           </div>
         </div>
 
-        <div className="bg-[#fff] px-[20px] py-20px] md:px-[70px] md:py-[40px]">
+        <div className="bg-[#fff] px-[20px] py-[30px] md:px-[70px] md:py-[40px]">
           <div className="flex justify-center">
-            <div className="innovation-layout px-[20px] md:px-[70px] mt-[30px] mb-[20px]">
-              <div className="flex justify-center">
-                <div className="innovation-card flex justify-between gap-4">
+            <div className="innovation-layout px-[10px] md:px-[60px] mt-[30px]">
+              <div className="">
+                <div className="innovation-card flex gap-[30px] md:gap-[30px]">
                   {items.slice(0, 3).map((item, index) => (
-                    <div key={index} className="text-center">
-                      <img
-                        src={item.imgSrc}
-                        alt={item.title}
-                        className="fade-in-element"
-                      />
-                      <ol>
-                        <li className="text-[20px] fade-in-element font-[600] text-[#1F2937] mt-4">
-                          {item.title}
-                        </li>
-                        <p className="text-[#667085] fade-in-element text-[16px] font-[400] mt-4">
-                          {item.description}
-                        </p>
-                      </ol>
+                    <div key={index} className="mt-[20px]">
+                      <div className="flex justify-center items-center md:block">
+                        <img
+                          src={item.imgSrc}
+                          alt={item.title}
+                          className="fade-in-element"
+                        />
+                      </div>
+                      <div>
+                        <ol className="nahco-lists">
+                          <h6 className="text-[20px] fade-in-element font-[600] text-[#1F2937] mt-4">
+                            {item.title}
+                          </h6>
+                          <p className="text-[#667085] fade-in-element text-[16px] font-[400] mt-4">
+                            {item.description}
+                          </p>
+                        </ol>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="flex justify-center mt-8">
-                <div className="innovation-card flex justify-between gap-4">
+              <div className="">
+                <div className="innovation-card flex gap-[20px] md:gap-[30px]">
                   {items.slice(3).map((item, index) => (
-                    <div key={index} className="text-center">
-                      <img
-                        src={item.imgSrc}
-                        alt={item.title}
-                        className="fade-in-element"
-                      />
-                      <ol>
-                        <li className="text-[20px] fade-in-element font-[600] text-[#1F2937] mt-4">
-                          {item.title}
-                        </li>
-                        <p className="text-[#667085] fade-in-element text-[16px] font-[400] mt-4 ">
-                          {item.description}
-                        </p>
-                      </ol>
+                    <div key={index} className="mt-[50px] md:mt-[80px]">
+                      <div className="flex justify-center items-center md:block">
+                        <img
+                          src={item.imgSrc}
+                          alt={item.title}
+                          className="fade-in-element"
+                        />
+                      </div>
+                      <div>
+                        <ol className="nahco-lists">
+                          <h6 className="text-[20px] fade-in-element font-[600] text-[#1F2937] mt-4">
+                            {item.title}
+                          </h6>
+                          <p className="text-[#667085] fade-in-element text-[16px] font-[400] mt-4 ">
+                            {item.description}
+                          </p>
+                        </ol>
+                      </div>
                     </div>
                   ))}
                 </div>

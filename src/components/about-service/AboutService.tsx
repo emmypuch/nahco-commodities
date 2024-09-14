@@ -53,7 +53,7 @@ const AboutService = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center">
       <div>
         <div className="newsletter flex justify-center items-center w-full">
           <div className="relative px-[10px] md:px-[90px] py-[60px] footer-overlay w-full max-w-[1440px]">
@@ -74,7 +74,7 @@ const AboutService = () => {
               </p>
             </div>
 
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.65]"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.5]"></div>
           </div>
         </div>
 
@@ -82,7 +82,7 @@ const AboutService = () => {
           {images.map((pair, index) => (
             <div
               key={index}
-              className="flex fade-in-element gap-4 justify-center"
+              className="nahco-service-images flex fade-in-element gap-4 md:justify-center"
             >
               {pair.map((image, idx) => (
                 <div key={idx}>

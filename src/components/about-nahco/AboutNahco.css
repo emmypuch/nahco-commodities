@@ -38,4 +38,13 @@ h4, h2 {
         display: flex;
         flex-wrap: wrap;
     }
+
+    ol.nahco-lists h6, ol.nahco-lists p {
+        text-align: center !important;
+    }
+
+    div.nahco-service-images {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -31,9 +31,9 @@ const NahcoCard = () => {
 
   return (
     <>
-      <div className="px-[50px] py-[30px]">
+      <div className="px-[50px] py-[50px]">
         <div className="nahco-wrapper flex justify-center items-center gap-4">
-          <div className="nahco-card p-6 border border-[#E5E7EB] rounded-[8px] md:h-[529px] w-[583px]">
+          <div className="nahco-card p-6 border bg-[#fff] border-[#E5E7EB] rounded-[8px] md:h-[529px] w-[583px]">
             <img src={Plant} alt="" />
             <h4 className="text-[20px] fade-in-element md:text-[24px] font-[700] text-[#263C28] mt-4">
               Our Mission: Unleashing Global Potential
@@ -48,7 +48,7 @@ const NahcoCard = () => {
             </p>
           </div>
 
-          <div className="nahco-card p-6 border border-[#E5E7EB] rounded-[8px] h-[539px] w-[583px]">
+          <div className="nahco-card p-6 border bg-[#fff] border-[#E5E7EB] rounded-[8px] h-[539px] w-[583px]">
             <img src={Weather} alt="" />
             <h4 className="text-[20px] fade-in-element md:text-[24px] font-[700] text-[#263C28] mt-4">
               The Trusted Partner for Global Success
@@ -68,9 +68,12 @@ const NahcoCard = () => {
               <span className="text-[#263C28]">Customization: </span>
               We understand that every business is unique. We tailor our
               solutions to your specific needs and products, ensuring a
-              successful export journey. Reliability: We are committed to
-              providing reliable, high-quality services that consistently meet
-              and exceed expectations.
+              successful export journey.
+            </p>
+            <p className="text-[#667085] fade-in-element text-[14px] md:text-[16px] font-[400] mt-4">
+              <span className="text-[#263C28]">Reliability: </span> We are
+              committed to providing reliable, high-quality services that
+              consistently meet and exceed expectations.
             </p>
           </div>
         </div>

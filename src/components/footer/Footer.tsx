@@ -4,6 +4,7 @@ import NahcoLogo from "../../assets/svg/nahco-logo.svg";
 import { useEffect } from "react";
 import "./Footer.css";
 import ServiceButton from "../buttons/ServiceButton";
+import { Link } from "react-router-dom";
 
 interface Link {
   href: string;
@@ -117,7 +118,7 @@ const Footer: React.FC = () => {
               />
             </div>
           </div>
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-[24px]"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.5] rounded-[24px]"></div>
         </div>
       </div>
 
@@ -131,9 +132,9 @@ const Footer: React.FC = () => {
         <img src={Divider} alt="" />
       </div>
       <div className="rights flex justify-between px-[0px] gap-4 md:gap-0 md:px-[50px] py-[30px] fade-in-element">
-        <div className="">
+        <Link to="/" className="">
           <img src={NahcoLogo} alt="" className="w-[100px] md:w-full" />
-        </div>
+        </Link>
         <div className="text">
           <p className="text-[#91B29A] text-[13px] md:text-[16px] mt-0 md:mt-4 font-[400]">
             © {currentYear} NAHCO. All rights reserved.
