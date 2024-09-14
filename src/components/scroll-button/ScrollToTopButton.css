@@ -1,0 +1,10 @@
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: -300px;
+    transition: right 0.3s ease-in-out;
+}
+
+.scroll-to-top-button.show {
+    right: 20px;
+}

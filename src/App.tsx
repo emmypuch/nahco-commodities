@@ -6,18 +6,23 @@ import GlobalReach from "./pages/global-section/GlobalReach";
 import Contact from "./pages/contact-section/Contact";
 import Quote from "./pages/quote-section/Quote";
 import Inquiry from "./pages/inquiry-section/Inquiry";
+import ScrollToTopButton from "./components/scroll-button/ScrollToTopButton";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/service" element={<Service />} />
-      <Route path="/global" element={<GlobalReach />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/quote" element={<Quote />} />
-      <Route path="/inquiry" element={<Inquiry />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/global" element={<GlobalReach />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/quote" element={<Quote />} />
+        <Route path="/inquiry" element={<Inquiry />} />
+      </Routes>
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
+    </>
   );
 };
 
