@@ -63,10 +63,10 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="fade-in-element bg-[#FBFAF9] px-[30px] py-[30px]">
+      <div className="fade-in-element px-[30px] py-[30px]">
         <BackButton />
       </div>
-      <div className="flex items-center bg-[#FBFAF9] justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-screen">
         <div className="px-[20px] md:px-[50px] py-[15px] md:py-[20px]">
           <form
             onSubmit={handleSubmit}

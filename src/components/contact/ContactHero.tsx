@@ -14,7 +14,7 @@ const ContactHero = () => {
         </div>
         <div className="flex justify-center items-center h-full">
           <div className="text-center">
-            <h2 className="text-[25px] md:text-[40px] font-[600] text-[#E4CAA4]">
+            <h2 className="text-[28px] md:text-[40px] font-[600] text-[#E4CAA4]">
               We’d love to hear from you!
             </h2>
             <p className="text-[#C8C0B4] font-[400] text-[14px] md:text-[16px] mt-3">

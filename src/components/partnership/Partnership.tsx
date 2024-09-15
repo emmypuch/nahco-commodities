@@ -37,7 +37,7 @@ const Partnership = () => {
         <img className="trust-line" src={TrustLine} alt="Trust line" />
       </div>
       <div className="fade-in-element text-content">
-        <h2 className="text-[#B19D7F] text-[36px] font-[600] text-center">
+        <h2 className="text-[#B19D7F] text-[24px] md:text-[36px] font-[600] text-center">
           Strategic Partnerships
         </h2>
         <p className="text-[14px] md:text-[16px] font-[400] text-[#A6A097] text-center mt-2">

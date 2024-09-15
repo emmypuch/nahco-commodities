@@ -76,14 +76,14 @@ const Services = () => {
   return (
     <>
       <div className="bg-white py-12 px-[20px] md:px-[50px]">
-        <h2 className="text-[#166534] font-[600] text-[30px] md:text-[36px] text-center mb-10 fade-in-element">
+        <h2 className="text-[#166534] font-[600] text-[28px] md:text-[36px] text-center mb-10 fade-in-element">
           Providing High Quality Products and <br /> Services
         </h2>
         <div className="max-w-[900px] mx-auto grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 w-[380px] h-[488px] md:w-[280px] rounded-lg overflow-hidden shadow-lg flex flex-col justify-between fade-in-element card-container"
+              className="bg-white border border-gray-200 w-[340px] h-[488px] md:w-[280px] rounded-lg overflow-hidden shadow-lg flex flex-col justify-between fade-in-element card-container"
             >
               <img
                 src={service.image}

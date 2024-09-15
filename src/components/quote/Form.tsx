@@ -64,7 +64,7 @@ const Form = () => {
 
   return (
     <>
-      <div className="quote-form-wrapper bg-[#FBFAF9] flex justify-center items-center min-h-screen gap-4">
+      <div className="quote-form-wrapper flex justify-center items-center min-h-screen gap-4">
         <div>
           <form
             onSubmit={handleSubmit}

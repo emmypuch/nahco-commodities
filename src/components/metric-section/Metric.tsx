@@ -59,10 +59,10 @@ const Metric = () => {
         </p>
       </div>
       <div className="flex justify-center items-center min-h-[70vh] md:min-h-screen">
-        <div className="metric-card fade-in-element md:h-[617px] w-[1200px] rounded-[24px] border border-[#E5E7EB] p-[0px] md:p-[24px]">
-          <div className="metric-content flex justify-between">
+        <div className="metric-card fade-in-element md:h-[617px] w-full max-w-[1200px] rounded-[24px] border border-[#E5E7EB] p-4 md:p-[24px]">
+          <div className="metric-content flex flex-col md:flex-row justify-between gap-6">
             <div className="numbers-container fade-in-element">
-              <div className="flex justify-between gap-6">
+              <div className="flex flex-col sm:flex-row justify-between gap-6">
                 <MetricItem
                   title="Export Volume"
                   subtitle="(Tonnes/Month)"
@@ -70,7 +70,7 @@ const Metric = () => {
                 />
                 <MetricItem title="Export Value" subtitle="($)" value="30M" />
               </div>
-              <div className="flex justify-between gap-6 mt-3 md:mt-6">
+              <div className="flex flex-col sm:flex-row justify-between gap-6 mt-3 md:mt-6">
                 <MetricItem
                   title="Logistics Efficiency"
                   subtitle="(Days/Shipment)"
@@ -82,7 +82,7 @@ const Metric = () => {
                   value="100"
                 />
               </div>
-              <div className="flex justify-between gap-6 mt-[20px] md:mt-6">
+              <div className="flex flex-col sm:flex-row justify-between gap-6 mt-[20px] md:mt-6">
                 <MetricItem
                   title="Employee Productivity"
                   subtitle="(Units/Day)"
@@ -95,7 +95,7 @@ const Metric = () => {
                 />
               </div>
             </div>
-            <div className="metric-img fade-in-element">
+            <div className="metric-img fade-in-element mt-6 md:mt-0">
               <img src={MetricImage} alt="Metric" />
             </div>
           </div>
