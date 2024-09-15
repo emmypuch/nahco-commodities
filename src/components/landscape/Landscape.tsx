@@ -48,11 +48,11 @@ const Landscape = () => {
 
   return (
     <>
-      <div className="px-[30px] md:px-[70px] py-[50px]">
+      <div className="px-[20px] md:px-[70px] py-[50px]">
         <h2 className="text-[#166534] font-[600] text-[28px] fade-in-element md:text-[36px] text-center">
           From bustling urban hubs to remote rural <br /> landscapes
         </h2>
-        <ol className="mt-6 px-[30px] md:px-[70px] py-[5px] md:py-[30px]">
+        <ol className="mt-6 px-[20px] md:px-[70px] py-[5px] md:py-[30px]">
           {regions.map((region, index) => (
             <li key={index} className="flex gap-2 fade-in-element">
               <div className="hidden md:block text-[30px]">.</div>
