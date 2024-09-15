@@ -49,7 +49,7 @@ const Metric = () => {
   return (
     <div className="px-[20px] md:px-[50px] pt-[20px] md:pt-[40px]">
       <div className="fade-in-element">
-        <h2 className="text-[#166534] font-[700] text-[36px] text-center">
+        <h2 className="text-[#166534] font-[700] text-[28px] md:text-[36px] text-center">
           Measuring Impact
         </h2>
         <p className="text-center font-[400] text-[14px] md:text-[20px] text-[#4B5563] mt-6">
