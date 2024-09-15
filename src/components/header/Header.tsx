@@ -25,7 +25,7 @@ const Header = () => {
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
-            className="text-[#C8C0B4] hover:text-[#E4CAA4] focus:outline-none relative left-[70px]"
+            className="text-[#C8C0B4] hover:text-[#E4CAA4] focus:outline-none relative left-[120px]"
           >
             <svg
               className="w-6 h-6"

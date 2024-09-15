@@ -34,7 +34,7 @@ const TrustContainer = () => {
   }, []);
 
   return (
-    <div className="wrapper-trust relative bg-[#1D2E1F] px-[50px] w-full py-[50px] h-[600px]">
+    <div className="wrapper-trust relative bg-[#1D2E1F] px-[20px] md:px-[50px] w-full py-[50px] h-[600px]">
       <div className="container-context flex items-center justify-between">
         <div className="relative z-10 w-[70%] md:w-[50%] fade-in-element">
           <div className="trust-image flex fade-in-element justify-start">

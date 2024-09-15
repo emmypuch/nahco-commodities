@@ -74,9 +74,9 @@ const Form = () => {
               Your privacy is our priority. We only use your information to
               provide your quote
             </p>
-            <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label className="block  text-[#111827] text-[12px] md:text-[14px] font-[500]">
+                <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                   First Name
                 </label>
                 <input
@@ -164,7 +164,7 @@ const Form = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                   Product
@@ -250,13 +250,13 @@ const Form = () => {
             <Link
               to="/inquiry"
               type="submit"
-              className="bg-[#263C28]  text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition"
+              className="bg-[#263C28] font-[500] text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition"
             >
               Request a Quote
             </Link>
           </form>
         </div>
-        <div className="quote-img">
+        <div className="quote-img hidden md:block">
           <img src={JarImg} alt="" className="w-[400px]" />
           <img src={BeansImg} alt="" className="w-[400px] mt-4" />
         </div>

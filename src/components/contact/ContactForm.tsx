@@ -66,13 +66,13 @@ const ContactForm = () => {
       <div className="fade-in-element bg-[#FBFAF9] px-[30px] py-[30px]">
         <BackButton />
       </div>
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center bg-[#FBFAF9] justify-center min-h-screen">
         <div className="px-[20px] md:px-[50px] py-[15px] md:py-[20px]">
           <form
             onSubmit={handleSubmit}
             className="bg-white p-6 w-full md:w-[500px] fade-in-element scrollable-content overflow-x-auto max-h-[600px] rounded-lg shadow-md mt-4 overflow-y-auto"
           >
-            <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                   First Name
@@ -185,7 +185,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="bg-[#263C28] fade-in-element text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition"
+              className="bg-[#263C28] fade-in-element font-[500] text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition"
             >
               Send
             </button>

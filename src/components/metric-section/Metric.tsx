@@ -10,11 +10,13 @@ interface MetricItemProps {
 
 const MetricItem: React.FC<MetricItemProps> = ({ title, subtitle, value }) => (
   <div className="metric-item">
-    <p className="text-[#3B6D3E] font-[500] text-[18px] text-center">{title}</p>
-    <p className="text-[#3B6D3E] font-[500] text-[18px] text-center">
+    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] text-center">
+      {title}
+    </p>
+    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] text-center">
       {subtitle}
     </p>
-    <p className="text-[#3B6D3E] font-[600] text-[36px] text-center mt-4">
+    <p className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] text-center mt-4">
       {value}
     </p>
   </div>
@@ -45,7 +47,7 @@ const Metric = () => {
   }, []);
 
   return (
-    <div className="px-[50px] pt-[40px]">
+    <div className="px-[20px] md:px-[50px] pt-[20px] md:pt-[40px]">
       <div className="fade-in-element">
         <h2 className="text-[#166534] font-[700] text-[36px] text-center">
           Measuring Impact
@@ -56,8 +58,8 @@ const Metric = () => {
           the global marketplace.
         </p>
       </div>
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="metric-card fade-in-element h-[617px] w-[1200px] rounded-[24px] border border-[#E5E7EB] p-[24px]">
+      <div className="flex justify-center items-center min-h-[70vh] md:min-h-screen">
+        <div className="metric-card fade-in-element md:h-[617px] w-[1200px] rounded-[24px] border border-[#E5E7EB] p-[0px] md:p-[24px]">
           <div className="metric-content flex justify-between">
             <div className="numbers-container fade-in-element">
               <div className="flex justify-between gap-6">
@@ -80,7 +82,7 @@ const Metric = () => {
                   value="100"
                 />
               </div>
-              <div className="flex justify-between gap-6 mt-3 md:mt-6">
+              <div className="flex justify-between gap-6 mt-[20px] md:mt-6">
                 <MetricItem
                   title="Employee Productivity"
                   subtitle="(Units/Day)"

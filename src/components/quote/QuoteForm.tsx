@@ -31,7 +31,7 @@ const QuoteForm = () => {
 
   return (
     <>
-      <div className="quote-wrapper px-[20px] md:px-[50px] py-[30px] fade-in-element">
+      <div className="quote-wrapper px-[20px] md:px-[50px] py-[20px] fade-in-element">
         <BackButton />
         <div className="text-center">
           <h2 className="text-[#166534] text-[28px] md:text-[36px] md:mt-0 mt-4 font-[700]">
