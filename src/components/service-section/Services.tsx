@@ -76,7 +76,7 @@ const Services = () => {
   return (
     <>
       <div className="bg-white py-12 px-[20px] md:px-[50px]">
-        <h2 className="text-[#166534] font-[700] text-[28px] md:text-[36px] text-center mb-10 fade-in-element">
+        <h2 className="text-[#166534] font-[700] text-[28px] md:text-[36px] text-center mb-8 fade-in-element">
           Providing High Quality Products and <br /> Services
         </h2>
         <div className="max-w-[900px] mx-auto grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-4">
