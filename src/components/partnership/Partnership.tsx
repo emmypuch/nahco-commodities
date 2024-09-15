@@ -40,7 +40,7 @@ const Partnership = () => {
         <h2 className="text-[#B19D7F] text-[24px] md:text-[36px] font-[600] text-center">
           Strategic Partnerships
         </h2>
-        <p className="text-[14px] md:text-[16px] font-[400] text-[#A6A097] text-center mt-2">
+        <p className="text-[14px] md:text-[16px] font-[400] text-[#A6A097] text-justify mt-2">
           NAHCO Commodities leverages strong partnerships to provide a
           comprehensive export solution. The parent company, NAHCO PLC, ensures
           reliable logistics with established relationships with major carriers.

@@ -73,9 +73,9 @@ const InnovationSection = () => {
   }, []);
 
   return (
-    <div className="bg-[#fff] px-[20px] py-20px] md:px-[70px] md:py-[40px]">
+    <div className="bg-[#fff] px-[20px] py-[20px] md:px-[70px] md:py-[40px]">
       <div className="">
-        <div className="bg-[#fff] px-[20px] py-20px] md:px-[70px] md:py-[40px]">
+        <div className="bg-[#fff] px-[20px] py-[20px] md:px-[70px] md:py-[40px]">
           <div className="flex justify-center">
             <div className="max-w-[900px]">
               <h2 className="font-[700] text-[28px] md:text-[40px] fade-in-element text-[#1F2937] text-center">
@@ -83,7 +83,7 @@ const InnovationSection = () => {
                 <br />
                 Integrating innovative technology and data-driven insights
               </h2>
-              <p className="text-[#667085] text-[14px] fade-in-element md:text-[16px] font-[400] mt-4 text-center">
+              <p className="text-[#667085] text-[14px] fade-in-element md:text-[16px] font-[400] mt-4 text-justify">
                 At Pula, we have refined the index insurance model to address
                 the specific needs and challenges faced by smallholder farmers
                 in emerging markets. Our approach integrates innovative
