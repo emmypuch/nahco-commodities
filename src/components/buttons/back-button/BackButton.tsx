@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BackBtn from "../../assets/svg/back-btn.svg";
+import BackBtn from "../../../assets/svg/back-btn.svg";
 import "./BackButton.css";
 
 const BackButton = () => {

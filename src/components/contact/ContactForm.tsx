@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BackButton from "../back-button/BackButton";
+import BackButton from "../buttons/back-button/BackButton";
 import "./ContactHero.css";
 
 const ContactForm = () => {

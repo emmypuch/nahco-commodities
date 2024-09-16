@@ -1,4 +1,4 @@
-import BackButton from "../back-button/BackButton";
+import BackButton from "../buttons/back-button/BackButton";
 import Form from "../../components/quote/Form";
 import { useEffect } from "react";
 import "./QuoteForm.css";

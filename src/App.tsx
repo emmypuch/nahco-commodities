@@ -7,6 +7,8 @@ import Contact from "./pages/contact-section/Contact";
 import Quote from "./pages/quote-section/Quote";
 import Inquiry from "./pages/inquiry-section/Inquiry";
 import ScrollToTopButton from "./components/scroll-button/ScrollToTopButton";
+import Team from "./pages/team-section/Team";
+import TeamBioDetail from "./pages/team-section/TeamBioDetail";
 
 const App = () => {
   return (
@@ -19,7 +21,11 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/inquiry" element={<Inquiry />} />
+        <Route path="/team" element={<Team />} />
+        {/* <Route path="/team/bio/:id" element={<TeamBioDetail />} /> */}
+        <Route path="/team/:id" element={<TeamBioDetail />} />
       </Routes>
+
       {/* Scroll to Top Button */}
       <ScrollToTopButton />
     </>
