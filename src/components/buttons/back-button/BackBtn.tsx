@@ -4,7 +4,7 @@ import BackButton2 from "../../../assets/svg/backbtn.svg";
 const BackBtn = () => {
   return (
     <>
-      <Link to="/" className="back-button">
+      <Link to="/team" className="back-button">
         {" "}
         <img src={BackButton2} alt="Back Button" />
       </Link>
