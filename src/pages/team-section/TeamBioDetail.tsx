@@ -32,7 +32,7 @@ const TeamBioDetail = () => {
             <h5 className="text-[#FFFBEB] font-[500] text-[18px] md:text-[24px] mt-2">
               {member.title}
             </h5>
-            {member.bio.map((paragraph, index) => (
+            {member.bio.map((paragraph: string, index: number) => (
               <p
                 key={index}
                 className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]"
@@ -40,15 +40,6 @@ const TeamBioDetail = () => {
                 {paragraph}
               </p>
             ))}
-            {/* <p className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]">
-              {member.bio2}
-            </p>
-            <p className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]">
-              {member.bio3}
-            </p>
-            <p className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]">
-              {member.bio4}
-            </p> */}
           </div>
         </div>
       </div>

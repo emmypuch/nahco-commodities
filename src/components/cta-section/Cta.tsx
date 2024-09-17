@@ -81,7 +81,7 @@ const Cta: React.FC = () => {
                 altText="Twitter"
                 text={
                   <a
-                    href="https://twitter.com/nahcocommodities"
+                    href="https://x.com/nahcocomm?s=11&t=5RQd7A28kv157N7ZjWJQSw"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
@@ -96,7 +96,7 @@ const Cta: React.FC = () => {
                 altText="Instagram"
                 text={
                   <a
-                    href="https://instagram.com/nahcocommodities"
+                    href="https://www.instagram.com/nahcocommodities?igsh=MTF6NzI0emV0cHhweg=="
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
@@ -119,7 +119,7 @@ const Cta: React.FC = () => {
               <ContactItem
                 iconSrc={Location}
                 altText="Location"
-                text="NAHCO Export Packaging & Processing Center, Murtala Muhammed International Airport Road, Ikeja, Lagos, Nigeria."
+                text="Room 12, NAHCO Export Processing Center, Murtala Muhammed International Airport Road, Ikeja, Lagos, Nigeria."
               />
             </ul>
           </div>

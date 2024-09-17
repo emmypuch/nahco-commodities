@@ -3,7 +3,7 @@ import Fruit from "../../assets/svg/fruit.svg";
 import Chart from "../../assets/svg/chart.svg";
 import Warehouse from "../../assets/svg/warehouse.svg";
 import Solar from "../../assets/svg/solar.svg";
-import Brand from "../../assets/svg/brand.svg";
+import Brand from "../../assets/svg/snack.svg";
 import Worktool from "../../assets/svg/worktool.svg";
 import Tool from "../../assets/svg/tool.svg";
 import { useEffect } from "react";

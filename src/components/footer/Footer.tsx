@@ -3,7 +3,6 @@ import Divider from "../../assets/svg/divider.svg";
 import NahcoLogo from "../../assets/svg/nahco-logo.svg";
 import { useEffect } from "react";
 import "./Footer.css";
-// import ServiceButton from "../buttons/ServiceButton";
 import { Link } from "react-router-dom";
 import Newsletter from "./newsletter/Newsletter";
 
@@ -62,7 +61,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const companyLinks: Link[] = [
-    { href: "#", text: "About Us" },
+    { href: "https://www.nahcoaviance.com/aboutnms/", text: "About Us" },
     { href: "#", text: "Career" },
     { href: "#", text: "Press" },
     { href: "#", text: "News" },
@@ -73,13 +72,19 @@ const Footer: React.FC = () => {
     { href: "#", text: "Blog" },
     { href: "#", text: "Newsletter" },
     { href: "#", text: "Publications" },
-    { href: "#", text: "Casestudies" },
+    { href: "#", text: "Case Studies" },
     { href: "#", text: "Support" },
   ];
 
   const followUsLinks: Link[] = [
-    { href: "#", text: "Twitter" },
-    { href: "#", text: "LinkedIn" },
+    {
+      href: "https://x.com/nahcocomm?s=11&t=5RQd7A28kv157N7ZjWJQSw",
+      text: "Twitter",
+    },
+    {
+      href: "https://www.linkedin.com/company/nahcocommodities/posts/?feedView=all",
+      text: "LinkedIn",
+    },
     { href: "#", text: "Facebook" },
     { href: "#", text: "AngelList" },
   ];
@@ -103,23 +108,6 @@ const Footer: React.FC = () => {
             className="absolute top-0 left-0 rounded-[24px] w-full h-full object-cover"
           />
           <Newsletter />
-          {/* <div className="relative z-10 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 w-full h-full p-6 md:p-12">
-            <h2 className="text-[#F0FDF4] fade-in-element text-[24px] md:text-[48px] font-[600] leading-tight text-center md:text-left">
-              Subscribe to Our <br /> Newsletter
-            </h2>
-            <div className="flex fade-in-element flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                className="bg-[#121C07] text-[#D0D5DD] rounded-[32px] h-[48px] w-full md:w-[287px] px-[15px] text-[12px] md:text-[14px] font-[400]"
-              />
-              <ServiceButton
-                backgroundColor="#FBFAF9"
-                textColor="#166534"
-                hoverColor="#F0FDF4"
-              />
-            </div>
-          </div> */}
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.5] rounded-[24px]"></div>
         </div>
       </div>

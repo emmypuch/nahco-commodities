@@ -22,7 +22,6 @@ const App = () => {
         <Route path="/quote" element={<Quote />} />
         <Route path="/inquiry" element={<Inquiry />} />
         <Route path="/team" element={<Team />} />
-        {/* <Route path="/team/bio/:id" element={<TeamBioDetail />} /> */}
         <Route path="/team/:id" element={<TeamBioDetail />} />
       </Routes>
 

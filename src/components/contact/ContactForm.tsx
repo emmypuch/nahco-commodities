@@ -176,7 +176,7 @@ const ContactForm = () => {
             </div>
 
             <p className="text-[10px] md:text-[12px] font-[400] fade-in-element text-[#6B7280] mb-4">
-              By pressing the submit button, I agree to Rollpay contacting me by
+              By pressing the submit button, I agree to NAHCO contacting me by
               email and/or phone to share opportunities exclusively available to
               Select or Enterprise customers. I also understand that any
               information I’ve shared in this form is subject to NAHCO’s Privacy
