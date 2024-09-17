@@ -17,7 +17,7 @@ const PriceButton: React.FC<PriceButtonProps> = ({
   return (
     <div className={`price-button ${isPositive ? "positive" : "negative"}`}>
       <div className="flex justify-around">
-        <span className="text-[#BBF7D0] text-[12px] md:text-[14px] font-[500]">
+        <span className="text-[#E1CFB4] text-[12px] md:text-[14px] font-[500]">
           {label}
         </span>
         <span className="text-[#FFFFFF] font-[700] text-[14px] md:text-[16px]">

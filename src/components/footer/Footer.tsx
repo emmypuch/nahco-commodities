@@ -3,8 +3,9 @@ import Divider from "../../assets/svg/divider.svg";
 import NahcoLogo from "../../assets/svg/nahco-logo.svg";
 import { useEffect } from "react";
 import "./Footer.css";
-import ServiceButton from "../buttons/ServiceButton";
+// import ServiceButton from "../buttons/ServiceButton";
 import { Link } from "react-router-dom";
+import Newsletter from "./newsletter/Newsletter";
 
 interface Link {
   href: string;
@@ -101,7 +102,8 @@ const Footer: React.FC = () => {
             alt="Newsletter Background"
             className="absolute top-0 left-0 rounded-[24px] w-full h-full object-cover"
           />
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 w-full h-full p-6 md:p-12">
+          <Newsletter />
+          {/* <div className="relative z-10 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 w-full h-full p-6 md:p-12">
             <h2 className="text-[#F0FDF4] fade-in-element text-[24px] md:text-[48px] font-[600] leading-tight text-center md:text-left">
               Subscribe to Our <br /> Newsletter
             </h2>
@@ -117,7 +119,7 @@ const Footer: React.FC = () => {
                 hoverColor="#F0FDF4"
               />
             </div>
-          </div>
+          </div> */}
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.5] rounded-[24px]"></div>
         </div>
       </div>

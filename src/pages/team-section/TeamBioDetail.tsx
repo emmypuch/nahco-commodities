@@ -15,9 +15,9 @@ const TeamBioDetail = () => {
   return (
     <>
       <Header />
-      <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[30px]">
+      <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[50px]">
         <BackBtn />
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center gap-6 md:gap-12 p-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center gap-6 md:gap-16 p-6">
           <div className="w-full md:w-auto md:flex-shrink-0">
             <img
               src={member.image}
@@ -32,9 +32,23 @@ const TeamBioDetail = () => {
             <h5 className="text-[#FFFBEB] font-[500] text-[18px] md:text-[24px] mt-2">
               {member.title}
             </h5>
-            <p className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-2">
-              {member.bio}
+            {member.bio.map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]"
+              >
+                {paragraph}
+              </p>
+            ))}
+            {/* <p className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]">
+              {member.bio2}
             </p>
+            <p className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]">
+              {member.bio3}
+            </p>
+            <p className="text-[#E1CFB4] font-[400] text-[16px] md:text-[14px] mt-[20px]">
+              {member.bio4}
+            </p> */}
           </div>
         </div>
       </div>

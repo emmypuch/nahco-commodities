@@ -1,5 +1,5 @@
 import "./Metric.css";
-import MetricImage from "../../assets/svg/metric-img.svg";
+import GroundnutImage from "../../assets/svg/metric-groundnut.svg";
 import { useEffect } from "react";
 
 interface MetricItemProps {
@@ -96,7 +96,7 @@ const Metric = () => {
               </div>
             </div>
             <div className="metric-img fade-in-element mt-6 md:mt-0">
-              <img src={MetricImage} alt="Metric" />
+              <img src={GroundnutImage} alt="Metric" />
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import JarImg from "../../assets/svg/form-img.svg";
+import GroundnutImg from "../../assets/svg/groundnut.svg";
 import BeansImg from "../../assets/svg/form-beans.svg";
 import { Link } from "react-router-dom";
 
@@ -257,7 +257,7 @@ const Form = () => {
           </form>
         </div>
         <div className="quote-img hidden md:block">
-          <img src={JarImg} alt="" className="w-[400px]" />
+          <img src={GroundnutImg} alt="" className="w-[400px]" />
           <img src={BeansImg} alt="" className="w-[400px] mt-4" />
         </div>
       </div>
