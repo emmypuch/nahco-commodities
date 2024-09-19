@@ -79,7 +79,6 @@ const Footer: React.FC = () => {
         setIsModalOpen(true);
       },
     },
-    // { href: "#", text: "Press" },
     { href: "#", text: "News" },
     { href: "/contact", text: "Contact" },
   ];
@@ -96,7 +95,12 @@ const Footer: React.FC = () => {
     { href: "#", text: "Facebook" },
   ];
 
-  const legalLinks: Link[] = [{ href: "#", text: "Privacy" }];
+  const legalLinks: Link[] = [
+    {
+      text: "Privacy",
+      href: "/privacy",
+    },
+  ];
 
   return (
     <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[30px]">

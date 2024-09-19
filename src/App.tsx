@@ -9,6 +9,7 @@ import Inquiry from "./pages/inquiry-section/Inquiry";
 import ScrollToTopButton from "./components/scroll-button/ScrollToTopButton";
 import Team from "./pages/team-section/Team";
 import TeamBioDetail from "./pages/team-section/TeamBioDetail";
+import PrivacyPage from "./pages/privacy-section/PrivacyPage";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/inquiry" element={<Inquiry />} />
         <Route path="/team" element={<Team />} />
         <Route path="/team/:id" element={<TeamBioDetail />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
       </Routes>
 
       <ScrollToTopButton />
