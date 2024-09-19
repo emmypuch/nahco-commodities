@@ -57,3 +57,9 @@ li, li a{
 .hidden {
     display: none;
 }
+
+@media screen and (max-width: 375px) {
+    button.toggle {
+        left: 90px
+    }
+}

@@ -75,3 +75,47 @@ div.container-partnership {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media screen and (max-width: 375px) {
+    div.ftz-img {
+        right: 120px;
+    }
+
+    div.ftz-img img {
+        width: 60px
+    }
+
+    div.logistics-img {
+        left: 60px;
+    }
+
+    div.logistics-img img {
+        width: 60px;
+    }
+
+    div.commodity-img img, div.plc-img img {
+        width: 60px;
+    }
+
+    div.plc-img {
+        left: 75px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    div.ftz-img {
+        right: 100px;
+    }
+
+    div.logistics-img {
+        left: 40px;
+    }
+
+    div.commodity-img  {
+        left: 15px;
+    }
+
+    div.plc-img {
+        left: 75px;
+    }
+}
