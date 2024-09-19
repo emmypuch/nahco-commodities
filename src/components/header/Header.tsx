@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <>
       <nav className="flex justify-between bg-[#263C28] px-[20px] md:px-[50px] pb-[20px] pt-[30px] items-center">
-        <Link to="/" className="logo">
+        <Link to="/privacy" className="logo">
           <img src={NahcoLogo} alt="Logo" className="md:w-full w-[100px]" />
         </Link>
 
