@@ -1,4 +1,4 @@
-const Privacy = () => {
+const PrivacyContent = () => {
   return (
     <>
       <div className="px-6 md:px-12 py-10 bg-gray-50 text-gray-800">
@@ -238,4 +238,4 @@ const Privacy = () => {
   );
 };
 
-export default Privacy;
+export default PrivacyContent;

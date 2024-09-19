@@ -1,12 +1,12 @@
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import Privacy from "../../components/privacy-section/Privacy";
+import PrivacyContent from "../../components/privacy-section/PrivacyContent";
 
 const PrivacyPage = () => {
   return (
     <>
       <Header />
-      <Privacy />
+      <PrivacyContent />
       <Footer />
     </>
   );
