@@ -28,11 +28,11 @@ const LinkList: React.FC<LinkListProps> = ({ title, links }) => (
         className="text-[#E4E7EC] fade-in-element text-[14px] list-none m-4 font-[400]"
       >
         {link.onClick ? (
-          <a href="#" onClick={link.onClick}>
+          <Link to="#" onClick={link.onClick}>
             {link.text}
-          </a>
+          </Link>
         ) : (
-          <a href={link.href}>{link.text}</a>
+          <Link to={link.href as string}>{link.text}</Link>
         )}
       </li>
     ))}
