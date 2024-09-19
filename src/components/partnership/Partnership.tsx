@@ -56,7 +56,7 @@ const Partnership = () => {
           authorities.
         </p>
         <div className="px-[20px] md:px-[50px] py-[30px]">
-          <div className="text-img flex justify-center fade-in-element">
+          <div className="text-img flex justify-center py-[30px] px-[40px] md:px-[50px] fade-in-element">
             <div className="plc-img relative top-[8px] left-[85px] md:left-[115px]">
               <Link to="https://www.nahcoaviance.com/" className="">
                 <img src={PLC} alt="" className="w-[70px] md:w-[100px]" />
