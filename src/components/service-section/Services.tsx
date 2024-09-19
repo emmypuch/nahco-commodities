@@ -75,7 +75,7 @@ const Services = () => {
 
   return (
     <>
-      <div className="bg-white py-12 px-[20px] md:px-[50px]">
+      <div className="bg-[#FBFAF9] py-12 px-[20px] md:px-[50px]">
         <h2 className="text-[#166534] font-[700] text-[28px] md:text-[36px] text-center mb-8 fade-in-element">
           Providing High Quality Products and <br /> Services
         </h2>

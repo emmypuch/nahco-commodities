@@ -1,6 +1,6 @@
 import CEO from "../assets/svg/ceo.svg";
 import Director from "../assets/svg/director.svg";
-import DirectorTwo from "../assets/svg/director2.svg";
+import DirectorTwo from "../assets/svg/directorr.svg";
 import DirectorThree from "../assets/svg/director3.svg";
 import DirectorFour from "../assets/svg/director4.svg";
 import DirectorFive from "../assets/svg/director5.svg";
@@ -18,7 +18,7 @@ const teamMember: TeamMember[] = [
   {
     id: "Ijeoma Ezenwa",
     name: "Ijeoma Ezenwa",
-    title: "CEO",
+    title: "Chief Executive Officer",
     image: CEO,
     alt: "CEO",
     bio: [
@@ -30,7 +30,7 @@ const teamMember: TeamMember[] = [
   {
     id: "Mr. Salman Oluwatoyin Taofeeq",
     name: "Mr. Salman Oluwatoyin Taofeeq",
-    title: "Director",
+    title: "Chief Executive Officer",
     image: Director,
     alt: "Director",
     bio: [
@@ -68,7 +68,7 @@ const teamMember: TeamMember[] = [
   {
     id: "Prince Saheed Lasisi",
     name: "Prince Saheed Lasisi",
-    title: "GED, Commercial and Business Development (CBD)",
+    title: "Director",
     image: DirectorFour,
     alt: "Director Four",
     bio: [
@@ -80,13 +80,13 @@ const teamMember: TeamMember[] = [
     ]
   },
   {
-    id: "Mr. Oluwamuyiwa Olumekun",
-    name: "Mr. Oluwamuyiwa Olumekun",
+    id: "Mr. Olumuyiwa Olumekun",
+    name: "Mr. Olumuyiwa Olumekun",
     title: "Director",
     image: DirectorFive,
     alt: "Director Five",
     bio: [
-      `Mr. Oluwamuyiwa Olumekun is a graduate of the University of Ibadan and an alumnus of Lagos Business School (LBS), having attended the Chief Executive Programme and the Advanced Management Programme at different times. He also attended IESE Business School in Spain and Harvard.`,
+      `Mr. Olumuyiwa Olumekun is a graduate of the University of Ibadan and an alumnus of Lagos Business School (LBS), having attended the Chief Executive Programme and the Advanced Management Programme at different times. He also attended IESE Business School in Spain and Harvard.`,
       `A member of the Institute of Directors (IoD), Olumekun was Executive Director at Red Star Express, one of the frontline courier firms in Nigeria. At Red Star Express, he provided support for the CEO and directed Sales, Marketing, Operations, Strategy, Business Development, Customer Service, and Information Technology at different times. He also served as the Acting Managing Director of the organization and was a member of the Board of Directors for 10 years.`,
       `He managed clients that included banks, FMCGs, oil and gas, aviation, logistics, and public sectors in his illustrious career. Olumekun has, for more than 25 years, mentored, coached, and advised executives and managers as they focused on business building and career development. He was Group Executive Director at NAHCO Plc from 2019 to 2022.`
     ]

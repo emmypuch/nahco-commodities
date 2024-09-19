@@ -25,7 +25,6 @@ const App = () => {
         <Route path="/team/:id" element={<TeamBioDetail />} />
       </Routes>
 
-      {/* Scroll to Top Button */}
       <ScrollToTopButton />
     </>
   );

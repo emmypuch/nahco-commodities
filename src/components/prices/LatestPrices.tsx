@@ -10,7 +10,7 @@ const LatestPrices: React.FC = () => {
       change: 2,
       isPositive: true,
     },
-    { label: "Hibiscus", price: "N5000/KG", change: 2, isPositive: true },
+    { label: "Hibiscus", price: "N5000/KG", change: +2, isPositive: true },
     { label: "Sesame Seeds", price: "N5000/KG", change: -2, isPositive: false },
   ];
 

@@ -1,14 +1,15 @@
 import FooterImg from "../../assets/svg/footer-image.svg";
 import Divider from "../../assets/svg/divider.svg";
 import NahcoLogo from "../../assets/svg/nahco-logo.svg";
-import { useEffect } from "react";
-import "./Footer.css";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Newsletter from "./newsletter/Newsletter";
+import "./Footer.css";
 
 interface Link {
-  href: string;
+  href?: string;
   text: string;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 interface LinkListProps {
@@ -26,13 +27,21 @@ const LinkList: React.FC<LinkListProps> = ({ title, links }) => (
         key={index}
         className="text-[#E4E7EC] fade-in-element text-[14px] list-none m-4 font-[400]"
       >
-        <a href={link.href}>{link.text}</a>
+        {link.onClick ? (
+          <a href="#" onClick={link.onClick}>
+            {link.text}
+          </a>
+        ) : (
+          <a href={link.href}>{link.text}</a>
+        )}
       </li>
     ))}
   </ul>
 );
 
 const Footer: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-in-element");
 
@@ -62,41 +71,32 @@ const Footer: React.FC = () => {
 
   const companyLinks: Link[] = [
     { href: "https://www.nahcoaviance.com/aboutnms/", text: "About Us" },
-    { href: "#", text: "Career" },
-    { href: "#", text: "Press" },
+    {
+      href: "#",
+      text: "Career",
+      onClick: (e: React.MouseEvent) => {
+        e.preventDefault();
+        setIsModalOpen(true);
+      },
+    },
+    // { href: "#", text: "Press" },
     { href: "#", text: "News" },
-    { href: "#", text: "Contact" },
-  ];
-
-  const resourcesLinks: Link[] = [
-    { href: "#", text: "Blog" },
-    { href: "#", text: "Newsletter" },
-    { href: "#", text: "Publications" },
-    { href: "#", text: "Case Studies" },
-    { href: "#", text: "Support" },
+    { href: "/contact", text: "Contact" },
   ];
 
   const followUsLinks: Link[] = [
     {
       href: "https://x.com/nahcocomm?s=11&t=5RQd7A28kv157N7ZjWJQSw",
-      text: "Twitter",
+      text: "X (Formerly Twitter)",
     },
     {
       href: "https://www.linkedin.com/company/nahcocommodities/posts/?feedView=all",
       text: "LinkedIn",
     },
     { href: "#", text: "Facebook" },
-    { href: "#", text: "AngelList" },
   ];
 
-  const legalLinks: Link[] = [
-    { href: "#", text: "Terms" },
-    { href: "#", text: "Privacy" },
-    { href: "#", text: "Cookies" },
-    { href: "#", text: "Licenses" },
-    { href: "#", text: "Settings" },
-    { href: "#", text: "Contact" },
-  ];
+  const legalLinks: Link[] = [{ href: "#", text: "Privacy" }];
 
   return (
     <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[30px]">
@@ -114,7 +114,6 @@ const Footer: React.FC = () => {
 
       <div className="links flex justify-between px-[20px] md:px-[50px] fade-in-element py-[30px]">
         <LinkList title="Company" links={companyLinks} />
-        <LinkList title="Resources" links={resourcesLinks} />
         <LinkList title="Follow Us" links={followUsLinks} />
         <LinkList title="Legal" links={legalLinks} />
       </div>
@@ -131,6 +130,15 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <p>Vacancies unavailable now. Kindly check back soon!</p>
+            <button onClick={() => setIsModalOpen(false)}>Okay</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

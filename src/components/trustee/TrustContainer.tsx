@@ -1,9 +1,5 @@
 import { useEffect } from "react";
 import TrustImg from "../../assets/svg/trust-img.svg";
-import FriesLand from "../../assets/svg/friesland.svg";
-import KPMG from "../../assets/svg/kpmg.svg";
-import Coke from "../../assets/svg/coke.svg";
-import Unilever from "../../assets/svg/unilever.svg";
 import TrustLine from "../../assets/svg/trust-line.svg";
 import "./TrustContainer.css";
 
@@ -34,7 +30,7 @@ const TrustContainer = () => {
   }, []);
 
   return (
-    <div className="wrapper-trust relative bg-[#1D2E1F] px-[20px] md:px-[50px] w-full py-[50px] h-[600px]">
+    <div className="wrapper-trust relative bg-[#1D2E1F] px-[20px] md:px-[50px] w-full pt-[80px] md:py-[50px] h-[600px]">
       <div className="container-context flex items-center justify-between">
         <div className="relative z-10 w-[70%] md:w-[50%] fade-in-element">
           <div className="trust-image flex fade-in-element justify-start">
@@ -54,18 +50,6 @@ const TrustContainer = () => {
             contributing to Nigeria's economic growth and establishing the
             country as a major player in the global market.
           </p>
-
-          <div className="mt-4">
-            <h5 className="text-[#BAAF9F] font-[600] text-[16px] mb-4">
-              Trusted by
-            </h5>
-            <div className="company-img flex gap-[50px] fade-in-element">
-              <img src={FriesLand} alt="Friesland" className="w-[80px]" />
-              <img src={KPMG} alt="KPMG" className="w-[80px]" />
-              <img src={Coke} alt="Coca Cola" className="w-[80px]" />
-              <img src={Unilever} alt="Unilever" className="w-[80px]" />
-            </div>
-          </div>
         </div>
       </div>
 
