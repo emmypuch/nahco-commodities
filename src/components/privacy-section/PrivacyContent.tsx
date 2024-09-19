@@ -39,79 +39,80 @@ const PrivacyContent = () => {
           </p>
           <ul className="list-disc pl-4 md:pl-6 mb-6 space-y-4">
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Account</strong>
               <span className="md:w-3/4">
-                means a unique account created for You to access our Service or
-                parts of our Service.
+                <span className="font-[700]">Account:</span> means a unique
+                account created for You to access our Service or parts of our
+                Service.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Affiliate</strong>
               <span className="md:w-3/4">
-                means an entity that controls, is controlled by or is under
-                common control with a party, where "control" means ownership of
-                50% or more of the shares, equity interest, or other securities
-                entitled to vote for election of directors or other managing
-                authority.
+                <span className="font-[700]">Affiliate:</span> means an entity
+                that controls, is controlled by or is under common control with
+                a party, where "control" means ownership of 50% or more of the
+                shares, equity interest, or other securities entitled to vote
+                for election of directors or other managing authority.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Company</strong>
               <span className="md:w-3/4">
-                (referred to as either "the Company", "We", "Us" or "Our" in
-                this Agreement) refers to NAHCO Commodities Limited, Room 12,
-                NAHCO Export Packaging & Processing Center, Murtala Muhammed
-                International Airport Road, Ikeja, Lagos, Nigeria.
+                <span className="font-[700]">Company:</span> (referred to as
+                either "the Company", "We", "Us" or "Our" in this Agreement)
+                refers to NAHCO Commodities Limited, Room 12, NAHCO Export
+                Packaging & Processing Center, Murtala Muhammed International
+                Airport Road, Ikeja, Lagos, Nigeria.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Cookies</strong>
               <span className="md:w-3/4">
-                are small files that are placed on Your computer, mobile device
-                or any other device by a website, containing the details of Your
-                browsing history on that website among its many uses.
+                <span className="font-[700]">Cookies:</span> are small files
+                that are placed on Your computer, mobile device or any other
+                device by a website, containing the details of Your browsing
+                history on that website among its many uses.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Country</strong>
+              <span className="font-[700]">Country:</span>{" "}
               <span className="md:w-3/4">refers to Nigeria.</span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Device</strong>
               <span className="md:w-3/4">
-                means any device that can access the Service such as a computer,
-                a cellphone, or a digital tablet.
+                <span className="font-[700]">Device:</span> means any device
+                that can access the Service such as a computer, a cellphone, or
+                a digital tablet.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Personal Data</strong>
               <span className="md:w-3/4">
-                is any information that relates to an identified or identifiable
+                <span className="font-[700]">Personal Data:</span> is any
+                information that relates to an identified or identifiable
                 individual.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Service</strong>
-              <span className="md:w-3/4">refers to the Website.</span>
-            </li>
-            <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Service Provider</strong>
               <span className="md:w-3/4">
-                means any natural or legal person who processes the data on
-                behalf of the Company.
+                <span className="font-[700]">Services:</span> refers to the
+                Website.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Usage Data</strong>
               <span className="md:w-3/4">
-                refers to data collected automatically, either generated by the
-                use of the Service or from the Service infrastructure itself.
+                <span className="font-[700]">Service Provider:</span> means any
+                natural or legal person who processes the data on behalf of the
+                Company.
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/6">Website</strong>
               <span className="md:w-3/4">
-                refers to NAHCO Commodities, accessible from{" "}
+                <span className="font-[700]">Usage Data:</span> refers to data
+                collected automatically, either generated by the use of the
+                Service or from the Service infrastructure itself.
+              </span>
+            </li>
+            <li className="flex flex-col md:flex-row md:space-x-2">
+              <span className="md:w-3/4">
+                <span className="font-[700]">Website:</span> refers to NAHCO
+                Commodities, accessible from{" "}
                 <a
                   href="https://www.nahcocommodities.com"
                   target="_blank"
@@ -123,11 +124,11 @@ const PrivacyContent = () => {
               </span>
             </li>
             <li className="flex flex-col md:flex-row md:space-x-2">
-              <strong className="md:w-1/4">You</strong>
               <span className="md:w-3/4">
-                means the individual accessing or using the Service, or the
-                company or other legal entity on behalf of which such individual
-                is accessing or using the Service.
+                <span className="font-[700]">You:</span> means the individual
+                accessing or using the Service, or the company or other legal
+                entity on behalf of which such individual is accessing or using
+                the Service.
               </span>
             </li>
           </ul>

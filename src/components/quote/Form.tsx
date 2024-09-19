@@ -178,9 +178,9 @@ const Form = () => {
                   <option value="" disabled>
                     Select product
                   </option>
-                  <option value="product1">Product 1</option>
-                  <option value="product2">Product 2</option>
-                  <option value="product3">Product 3</option>
+                  <option value="product1">Dried Hibiscus Flowers</option>
+                  <option value="product2">Dried Raw Cashew Nuts</option>
+                  <option value="product3">Natural Sesame Seeds</option>
                 </select>
               </div>
 

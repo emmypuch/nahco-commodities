@@ -86,7 +86,7 @@ const Cta: React.FC = () => {
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    X (Formerly Twitter) @nahcocommodities
+                    (Formerly Twitter) @nahcocommodities
                   </a>
                 }
               />

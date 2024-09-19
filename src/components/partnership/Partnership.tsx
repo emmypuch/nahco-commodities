@@ -1,8 +1,13 @@
 import "./Partnership.css";
-import PartnershipImage from "../../assets/svg/partnership.svg";
+import PartnershipImage from "../../assets/svg/partnerimg.svg";
+import PLC from "../../assets/svg/plc.svg";
+import FTZ from "../../assets/svg/ftz.svg";
+import Logistics from "../../assets/svg/partner-logistics.svg";
+import Commodities from "../../assets/svg/commodities.svg";
 import Herovector from "../../assets/svg/hero-vector.svg";
 import TrustLine from "../../assets/svg/trust-line.svg";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Partnership = () => {
   useEffect(() => {
@@ -50,8 +55,42 @@ const Partnership = () => {
           export handling thanks to their strong relationships with relevant
           authorities.
         </p>
-        <div className="text-img fade-in-element">
-          <img src={PartnershipImage} alt="Nahco image" />
+        <div className="px-[20px] md:px-[50px] py-[30px]">
+          <div className="text-img flex justify-center fade-in-element">
+            <div className="relative top-[8px] left-[85px] md:left-[115px]">
+              <Link to="https://www.nahcoaviance.com/" className="">
+                <img src={PLC} alt="" className="w-[70px] md:w-[100px]" />
+              </Link>
+            </div>
+            <div className="absolute mt-[60px]">
+              <img src={PartnershipImage} alt="Nahco image" />
+            </div>
+            <div className="relative flex justify-between gap-[30px] bottom-[-100px]">
+              <div className="relative right-[150px] md:right-[165px] mt-[60px]">
+                <Link to="https://www.nfz.com.ng/">
+                  <img src={FTZ} alt="" className="w-[70px] md:w-[100px]" />
+                </Link>
+              </div>
+              <div className="relative left-[90px] md:left-[70px] mt-[60px]">
+                <Link to="https://mainlandcargooptions.com/">
+                  <img
+                    src={Logistics}
+                    alt=""
+                    className="w-[70px] md:w-[100px]"
+                  />
+                </Link>
+              </div>
+              <div className="absolute left-[20px] ">
+                <Link to="https://www.nahcoaviance.com/aboutnms/">
+                  <img
+                    src={Commodities}
+                    alt=""
+                    className="w-[70px] md:w-[100px] mt-[60px]"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

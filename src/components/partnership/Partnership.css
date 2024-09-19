@@ -58,11 +58,11 @@ div.container-partnership {
     justify-content: center;
 }
 
-.text-img img {
-    width: 500px;
+/* .text-img img {
+    width: 20px;
     height: auto;
     margin-top: 15px;
-}
+} */
 
 /* Fade-in transition */
 .fade-in-element {

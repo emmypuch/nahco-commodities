@@ -92,7 +92,14 @@ const Footer: React.FC = () => {
       href: "https://www.linkedin.com/company/nahcocommodities/posts/?feedView=all",
       text: "LinkedIn",
     },
-    { href: "#", text: "Facebook" },
+    {
+      href: "https://www.facebook.com/profile.php?id=61562183703436",
+      text: "Facebook",
+    },
+    {
+      href: "https://www.instagram.com/nahcocommodities?igsh=MTF6NzI0emV0cHhweg==",
+      text: "Instagram",
+    },
   ];
 
   const legalLinks: Link[] = [
