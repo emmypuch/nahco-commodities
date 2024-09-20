@@ -101,7 +101,7 @@ const Cta: React.FC = () => {
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    Instagram @nahcocommodities
+                    @nahcocommodities
                   </a>
                 }
               />

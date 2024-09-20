@@ -55,38 +55,30 @@ const Partnership = () => {
           export handling thanks to their strong relationships with relevant
           authorities.
         </p>
-        <div className="px-[20px] md:px-[50px] py-[30px]">
-          <div className="text-img flex justify-center py-[30px] px-[60px] md:px-[50px] fade-in-element">
-            <div className="plc-img relative top-[8px] left-[85px] md:left-[115px]">
+        <div className="px-[20px] md:px-[50px] pb-[50px] md:pb-[20px]">
+          <div className="text-img items-center flex-col flex justify-center py-[30px] px-[50px] md:px-[50px] fade-in-element">
+            <div className="plc-img relative top-[0px] md:left-[1px]">
               <Link to="https://www.nahcoaviance.com/" className="">
-                <img src={PLC} alt="" className="w-[70px] md:w-[100px]" />
+                <img src={PLC} alt="" className="" />
               </Link>
             </div>
-            <div className="absolute mt-[60px]">
+            <div className="absolute mt-[95px]">
               <img src={PartnershipImage} alt="Nahco image" />
             </div>
-            <div className="relative flex justify-between gap-[30px] bottom-[-100px]">
-              <div className="ftz-img relative right-[150px] md:right-[165px] mt-[60px]">
+            <div className="relative flex justify-between gap-[15px] md:gap-[30px] bottom-[-100px]">
+              <div className="ftz-img relative md:right-[100px] mt-[20px]">
                 <Link to="https://www.nfz.com.ng/">
-                  <img src={FTZ} alt="" className="w-[70px] md:w-[100px]" />
+                  <img src={FTZ} alt="" className="" />
                 </Link>
               </div>
-              <div className="logistics-img relative left-[90px] md:left-[70px] mt-[60px]">
-                <Link to="https://mainlandcargooptions.com/">
-                  <img
-                    src={Logistics}
-                    alt=""
-                    className="w-[70px] md:w-[100px]"
-                  />
-                </Link>
-              </div>
-              <div className="commodity-img absolute left-[20px] ">
+              <div className="commodity-img absolute left-[80px]">
                 <Link to="https://www.nahcoaviance.com/aboutnms/">
-                  <img
-                    src={Commodities}
-                    alt=""
-                    className="w-[70px] md:w-[100px] mt-[60px]"
-                  />
+                  <img src={Commodities} alt="" className=" mt-[20px]" />
+                </Link>
+              </div>
+              <div className="logistics-img relative md:left-[120px] mt-[20px]">
+                <Link to="https://mainlandcargooptions.com/">
+                  <img src={Logistics} alt="" className="" />
                 </Link>
               </div>
             </div>

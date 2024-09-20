@@ -1,9 +1,8 @@
-/* .newsletter {
-    position: relative;
-    transform: translateY(100%);
-    transition: transform 0.5s ease-in-out;
-}
 
-.newsletter.show {
-    transform: translateY(0);
-} */
+
+@media screen and (max-width: 768px) {
+    div.newsletter-contact {
+        display: flex;
+        flex-direction: column;
+    }
+}
