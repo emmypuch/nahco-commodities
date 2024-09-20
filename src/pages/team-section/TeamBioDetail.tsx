@@ -35,7 +35,7 @@ const TeamBioDetail = () => {
             {member.bio.map((paragraph: string, index: number) => (
               <p
                 key={index}
-                className="text-[#E1CFB4] font-[400] text-justify text-[16px] md:text-[14px] mt-[20px]"
+                className="text-[#E1CFB4] font-[400] text-justify text-[14px] md:text-[16px] mt-[20px]"
               >
                 {paragraph}
               </p>

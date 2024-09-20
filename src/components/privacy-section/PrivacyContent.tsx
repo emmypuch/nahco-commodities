@@ -231,7 +231,7 @@ const PrivacyContent = () => {
           <h4 className="text-xl font-medium mb-2">Contact Us</h4>
           <p className="mb-6 leading-relaxed">
             If you have any questions, you can contact us at:
-            contact@nahcocommodities.com.
+            info@nahcocommodities.com.
           </p>
         </div>
       </div>
