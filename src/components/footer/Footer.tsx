@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const companyLinks: Link[] = [
-    { href: "https://www.nahcoaviance.com/aboutnms/", text: "About Us" },
+    { href: "/about", text: "About Us" },
     {
       href: "#",
       text: "Career",
