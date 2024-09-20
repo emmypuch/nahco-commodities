@@ -5,7 +5,7 @@ import Warehouse from "../../assets/svg/warehouse.svg";
 import Solar from "../../assets/svg/solar.svg";
 import Brand from "../../assets/svg/snack.svg";
 import Worktool from "../../assets/svg/worktool.svg";
-import Tool from "../../assets/svg/tool.svg";
+import Tool from "../../assets/svg/meeting.svg";
 import { useEffect } from "react";
 import "./AboutService.css";
 import ServiceCard from "./service-card/ServiceCard";
