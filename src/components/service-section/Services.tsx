@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import "./Services.css";
-import Agro from "../../assets/svg/agro.svg";
-import Bag from "../../assets/svg/bag.svg";
+import Agro from "../../assets/svg/cashew.svg";
+import Bag from "../../assets/svg/sesame.svg";
 import Certificate from "../../assets/svg/certificate.svg";
 import Containers from "../../assets/svg/containers.svg";
 import strawberry from "../../assets/svg/strawberry.svg";
 import Training from "../../assets/svg/training.svg";
 import ServiceButton from "../buttons/ServiceButton";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -99,12 +100,12 @@ const Services = () => {
                 </p>
               </div>
               <div className="p-4">
-                <a
-                  href="#"
+                <Link
+                  to="/service"
                   className="text-[#56B870] hover:text-green-800 font-[400] text-[16px]"
                 >
                   Learn More →
-                </a>
+                </Link>
               </div>
             </div>
           ))}
