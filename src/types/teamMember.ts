@@ -30,7 +30,7 @@ const teamMember: TeamMember[] = [
   {
     id: "Mr. Salman Oluwatoyin Taofeeq",
     name: "Mr. Salman Oluwatoyin Taofeeq",
-    title: "Chief Executive Officer",
+    title: "Director",
     image: Director,
     alt: "Director",
     bio: [
