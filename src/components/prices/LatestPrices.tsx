@@ -6,19 +6,19 @@ const LatestPrices: React.FC = () => {
   const prices = [
     {
       label: "Raw Cashew Nuts",
-      price: "N1,070.00/MT",
+      price: "N1,150,000/MT",
       change: 2,
       isPositive: true,
     },
     {
       label: "Hibiscus",
-      price: "N1,600.00/MT",
+      price: "N1,600,000/MT",
       change: +2,
       isPositive: true,
     },
     {
       label: "Sesame Seeds",
-      price: "N2,200.00/MT",
+      price: "N2,050,000/MT",
       change: -2,
       isPositive: false,
     },

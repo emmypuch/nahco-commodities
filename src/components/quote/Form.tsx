@@ -179,7 +179,7 @@ const Form = () => {
                     Select product
                   </option>
                   <option value="product1">Dried Hibiscus Flowers</option>
-                  <option value="product2">Dried Raw Cashew Nuts</option>
+                  <option value="product2">Raw Cashew Nuts</option>
                   <option value="product3">Natural Sesame Seeds</option>
                 </select>
               </div>

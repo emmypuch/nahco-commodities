@@ -9,7 +9,7 @@ interface MetricItemProps {
 }
 
 const MetricItem: React.FC<MetricItemProps> = ({ title, subtitle, value }) => (
-  <div className="metric-item">
+  <div className="metric-item fade-in-element">
     <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] text-center">
       {title}
     </p>

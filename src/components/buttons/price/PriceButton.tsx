@@ -24,7 +24,7 @@ const PriceButton: React.FC<PriceButtonProps> = ({
           {price}
         </span>
         <span className={change >= 0 ? "positive-change" : "negative-change"}>
-          {change}%
+          {/* {change}% */}
         </span>
       </div>
     </div>

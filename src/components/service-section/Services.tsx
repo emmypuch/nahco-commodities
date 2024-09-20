@@ -84,7 +84,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="quality-card bg-white border border-gray-200 w-[340px] h-[488px] md:w-[280px] rounded-lg overflow-hidden shadow-lg flex flex-col justify-between fade-in-element card-container"
+              className="quality-card fade-in-element bg-white border border-gray-200 w-[340px] h-[488px] md:w-[280px] rounded-lg overflow-hidden shadow-lg flex flex-col justify-between fade-in-element card-container"
             >
               <img
                 src={service.image}
