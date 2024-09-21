@@ -71,7 +71,7 @@ const Partnership = () => {
                   <img src={FTZ} alt="" className="" />
                 </Link>
               </div>
-              <div className="commodity-img absolute left-[80px]">
+              <div className="commodity-img absolute md:left-[80px]">
                 <Link to="https://www.nahcoaviance.com/aboutnms/">
                   <img src={Commodities} alt="" className=" mt-[20px]" />
                 </Link>
