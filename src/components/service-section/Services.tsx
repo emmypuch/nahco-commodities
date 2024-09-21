@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./Services.css";
-import Agro from "../../assets/svg/cashew.svg";
+import Agro from "../../assets/svg/raw.svg";
 import Bag from "../../assets/svg/sesame.svg";
 import Certificate from "../../assets/svg/certificate.svg";
 import Containers from "../../assets/svg/containers.svg";

@@ -145,7 +145,12 @@ const Footer: React.FC = () => {
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <p>Vacancies unavailable now. Kindly check back soon!</p>
+            <h2 className="text-[#263C28] font-[700] text-[24px] md:text-[32px]">
+              No Vacancies available now!
+            </h2>
+            <p className="text-[#6B7280] font-[400] text-[14px] md:text-[16px] mt-4">
+              Kindly check back soon!
+            </p>
             <button onClick={() => setIsModalOpen(false)}>Okay</button>
           </div>
         </div>
