@@ -82,6 +82,10 @@ div.container-partnership {
     div.logistics-img {
         left: 90px;
     }
+
+    div.commodity-img {
+        left: 75px;
+    }
 }
 
 @media screen and (max-width: 375px) {

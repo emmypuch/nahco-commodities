@@ -78,24 +78,27 @@ const InnovationSection = () => {
         <div className="bg-[#fff] px-[20px] py-[20px] md:px-[70px] md:py-[40px]">
           <div className="flex justify-center">
             <div className="max-w-[900px]">
-              <h2 className="font-[700] text-[28px] md:text-[40px] fade-in-element text-[#1F2937] text-center">
+              <h2 className="font-[700] text-[25px] md:text-[40px] fade-in-element text-[#1F2937] text-center">
                 <span className="text-[#5AC777]">Our Approach </span>
                 <br />
                 Integrating innovative technology and data-driven insights
               </h2>
-              <p className="text-[#667085] text-[14px] fade-in-element md:text-[16px] font-[400] mt-4 text-justify">
-                At Pula, we have refined the index insurance model to address
+              <p className="text-[#667085] text-[14px] fade-in-element md:text-[16px] font-[400] mt-6 md:mt-4 text-justify">
+                {/* At NAHCO Commodities, we have refined the index insurance model to address
                 the specific needs and challenges faced by smallholder farmers
                 in emerging markets. Our approach integrates innovative
                 technology and data-driven insights to deliver accessible,
                 affordable, and effective insurance solutions. Here's how we
-                implement index insurance through our platform:
+                implement index insurance through our platform: */}
+                At NAHCO Commodities, our approach integrates innovative
+                technology and data-driven insights to deliver accessible, and
+                effective export solutions for agro-commodities.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="bg-[#fff] px-[20px] py-[30px] md:px-[70px] md:py-[40px]">
+        <div className="bg-[#fff] px-[20px] py-[20px] md:px-[70px] md:py-[40px]">
           <div className="flex justify-center">
             <div className="innovation-layout px-[10px] md:px-[60px] mt-[30px]">
               <div className="">
