@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GroundnutImage from "../../assets/svg/metric-groundnut.svg";
 import "./Metric.css";
 
@@ -15,28 +15,57 @@ const MetricCard: React.FC<MetricCardProps> = ({
   targetValue,
   format,
 }) => {
-  const [currentValue, setCurrentValue] = React.useState(0);
+  const [currentValue, setCurrentValue] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const duration = 2000;
-    const increment = (targetValue / duration) * 10;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-    const interval = setInterval(() => {
-      setCurrentValue((prev) => {
-        if (prev < targetValue) {
-          return prev + increment;
-        } else {
-          clearInterval(interval);
-          return targetValue;
-        }
-      });
-    }, 10);
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
 
-    return () => clearInterval(interval);
-  }, [targetValue]);
+    return () => {
+      if (cardRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      const duration = 10000;
+      const increment = (targetValue / duration) * 10;
+
+      const interval = setInterval(() => {
+        setCurrentValue((prev) => {
+          if (prev < targetValue) {
+            return Math.min(prev + increment, targetValue);
+          } else {
+            clearInterval(interval);
+            return targetValue;
+          }
+        });
+      }, 10);
+    }
+  }, [isVisible, targetValue]);
 
   return (
-    <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+    <div
+      ref={cardRef}
+      className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full"
+    >
       <p className="text-[#3B6D3E] text-center font-[500] text-[14px] md:text-[18px] mt-2">
         {title}
       </p>
@@ -51,29 +80,6 @@ const MetricCard: React.FC<MetricCardProps> = ({
 };
 
 const Metric = () => {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".fade-in-element");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    elements.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   const formatValue = (val: number): string => {
     if (val >= 1000000) return `${(val / 1000000).toFixed(1)}M`;
     return Math.floor(val).toString();
@@ -133,12 +139,6 @@ const Metric = () => {
                   targetValue={50}
                   format={formatValue}
                 />
-                {/* <MetricCard
-                  title="Order Fulfillment Rate"
-                  subtitle="(%)"
-                  targetValue={98}
-                  format={(value) => `${value}%`}
-                /> */}
                 <MetricCard
                   title="Order Fulfillment Rate"
                   subtitle="(%)"
