@@ -2,26 +2,6 @@ import "./Metric.css";
 import GroundnutImage from "../../assets/svg/metric-groundnut.svg";
 import { useEffect } from "react";
 
-interface MetricItemProps {
-  title: string;
-  subtitle: string;
-  value: string | number;
-}
-
-const MetricItem: React.FC<MetricItemProps> = ({ title, subtitle, value }) => (
-  <div className="metric-item fade-in-element">
-    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] text-center">
-      {title}
-    </p>
-    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] text-center">
-      {subtitle}
-    </p>
-    <p className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] text-center mt-4">
-      {value}
-    </p>
-  </div>
-);
-
 const Metric = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-in-element");
@@ -59,42 +39,94 @@ const Metric = () => {
         </p>
       </div>
       <div className="flex justify-center items-center min-h-[70vh] md:min-h-screen">
-        <div className="metric-card fade-in-element md:h-[617px] w-full max-w-[1200px] rounded-[24px] border border-[#E5E7EB] p-4 md:p-[24px]">
-          <div className="metric-content flex flex-col md:flex-row justify-between gap-6">
+        <div className="metric-card fade-in-element p-4 md:p-[24px]">
+          <div className="metric-content flex flex-col md:flex-row justify-between gap-[40px]">
             <div className="numbers-container fade-in-element">
-              <div className="flex flex-col sm:flex-row justify-between gap-6">
-                <MetricItem
-                  title="Export Volume"
-                  subtitle="(Tonnes/Month)"
-                  value="1500"
-                />
-                <div className="mr-[25px] md:mr-0">
-                  <MetricItem title="Export Value" subtitle="($)" value="$5M" />
+              <div className="metric-content-card mt-0 md:mt-4 flex flex-row justify-between gap-4">
+                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+                  <div className="">
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      Export Volume
+                    </p>
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      (Tonnes/Month)
+                    </p>
+                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
+                      1500
+                    </h2>
+                  </div>
+                </div>
+                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+                  <div className="">
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      Export Value
+                    </p>
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      ($)
+                    </p>
+                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
+                      5M
+                    </h2>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row justify-between gap-6 mt-3 md:mt-6">
-                <MetricItem
-                  title="Logistics Efficiency"
-                  subtitle="(Days/Shipment)"
-                  value="8"
-                />
-                <MetricItem
-                  title="Processing Efficiency"
-                  subtitle="(Units/Hour)"
-                  value="100"
-                />
+
+              <div className="metric-content-card flex fade-in-element flex-col md:flex md:flex-row justify-between gap-4 mt-4">
+                <div className="metric-card-bg bg-white shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+                  <div className="">
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      Logistics Efficiency
+                    </p>
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      (Days/Shipment)
+                    </p>
+                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
+                      8
+                    </h2>
+                  </div>
+                </div>
+                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+                  <div className="">
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      Processing Efficiency
+                    </p>
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      (Units/Hour)
+                    </p>
+                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
+                      100
+                    </h2>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col sm:flex-row justify-between gap-6 mt-[20px] md:mt-6">
-                <MetricItem
-                  title="Employee Productivity"
-                  subtitle="(Units/Day)"
-                  value="50"
-                />
-                <MetricItem
-                  title="Order Fulfillment Rate"
-                  subtitle="(%)"
-                  value="98%"
-                />
+
+              <div className="metric-content-card flex flex-col fade-in-element md:flex md:flex-row justify-between gap-4 mt-4">
+                <div className="metric-card-bg bg-white shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+                  <div className="">
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      Employee Productivity
+                    </p>
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      (Units/Day)
+                    </p>
+                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
+                      50
+                    </h2>
+                  </div>
+                </div>
+                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+                  <div className="">
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      Order Fulfillment Rate
+                    </p>
+                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
+                      (%)
+                    </p>
+                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
+                      98
+                    </h2>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="metric-img fade-in-element mt-6 md:mt-0">

@@ -81,56 +81,8 @@ div.container-partnership {
     -o-transform: translateY(0);
 }
 
-@media screen and (max-width: 425px) {
-    div.ftz-img {
-        right: 80px;
-    }
-
-    div.plc-img {
-        left: 5px;
-    }
-
-    div.logistics-img {
-        left: 90px;
-    }
-
-    div.commodity-img {
-        left: 65px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    div.ftz-img {
-        right: 70px;
-    }
-
-    div.logistics-img {
-        left: 75px;
-    }
-
-    div.commodity-img  {
-        left: 50px;
-    }
-
-    div.commodity-img img {
-        width: 80px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    div.ftz-img {
-        right: 70px;
-    }
-
-    div.logistics-img {
-        left: 70px;
-    }
-
-    div.commodity-img {
-        left: 45px;
-    }
-
-    div.commodity-img img {
-        width: 50px;
+@media screen and (max-width: 768px) {
+    div.container-partnership {
+        height: 830px;
     }
 }

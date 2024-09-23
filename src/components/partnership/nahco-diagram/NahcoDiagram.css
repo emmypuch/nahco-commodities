@@ -1,0 +1,92 @@
+.diagram-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-size: cover;
+}
+
+.parent-box {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.child-container {
+    display: flex;
+    justify-content: space-between;
+    /* width: 60%; */
+    align-items: center;
+    position: relative;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 80px;
+    background-color: transparent;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.box p {
+    margin: 0;
+}
+
+.parent-box .box:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: 50px;
+    background-color: #FFD700;
+}
+
+.child-container .box:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: 2px;
+    height: 50px;
+    /* background-color: #FFD700; */
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: #FFD700;
+    /* margin: 0 10px; */
+}
+
+@media (max-width: 768px) {
+    .child-container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .box {
+        margin-bottom: 20px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .parent-box {
+        margin-bottom: 10px;
+    }
+
+    .parent-box .box:after {
+        height: 30px;
+    }
+
+    .child-container .box:before {
+        height: 30px;
+    }
+}

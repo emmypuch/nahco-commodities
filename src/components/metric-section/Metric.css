@@ -53,16 +53,33 @@ h2 {
             width: 100%;
         }
     
-        .numbers-container .flex {
-            flex-direction: row;
-            gap: 20px;
-        }
-
-        div.metric-card {
-            border: none;
-        }
-    
         .metric-img img {
             display: none;
         }
+}
+
+@media screen and (max-width: 425px) {
+    div.metric-content-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    div.metric-card-bg {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    div.metric-card-bg {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    div.metric-card-bg {
+        width: 250px;
+    }
 }

@@ -1,13 +1,14 @@
 import "./Partnership.css";
-import PartnershipImage from "../../assets/svg/partnerimg.svg";
-import PLC from "../../assets/svg/plc.svg";
-import FTZ from "../../assets/svg/ftz.svg";
-import Logistics from "../../assets/svg/management.svg";
-import Commodities from "../../assets/svg/nahco-logistics.svg";
+// import PartnershipImage from "../../assets/svg/partnerimg.svg";
+// import PLC from "../../assets/svg/plc.svg";
+// import FTZ from "../../assets/svg/ftz.svg";
+// import Logistics from "../../assets/svg/management.svg";
+// import Commodities from "../../assets/svg/nahco-logistics.svg";
 import Herovector from "../../assets/svg/hero-vector.svg";
 import TrustLine from "../../assets/svg/trust-line.svg";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import NahcoDiagram from "./nahco-diagram/NahcoDiagram";
+// import { Link } from "react-router-dom";
 
 const Partnership = () => {
   useEffect(() => {
@@ -55,7 +56,10 @@ const Partnership = () => {
           export handling thanks to their strong relationships with relevant
           authorities.
         </p>
-        <div className="px-[20px] md:px-[50px] pb-[50px] md:pb-[20px]">
+        <div>
+          <NahcoDiagram />
+        </div>
+        {/* <div className="px-[20px] md:px-[50px] pb-[50px] md:pb-[20px]">
           <div className="text-img items-center flex-col flex justify-center py-[30px] px-[50px] md:px-[50px] fade-in-element">
             <div className="plc-img relative top-[0px] md:left-[1px]">
               <Link to="https://www.nahcoaviance.com/" className="">
@@ -83,7 +87,7 @@ const Partnership = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
