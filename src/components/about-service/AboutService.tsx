@@ -3,7 +3,7 @@ import Fruit from "../../assets/svg/fruit.svg";
 import Chart from "../../assets/svg/chart.svg";
 import Warehouse from "../../assets/svg/warehouse.svg";
 import Solar from "../../assets/svg/solar.svg";
-import Brand from "../../assets/svg/service-sesame.svg";
+import Brand from "../../assets/svg/sesame-jar.svg";
 import Worktool from "../../assets/svg/worktool.svg";
 import Tool from "../../assets/svg/meeting.svg";
 import { useEffect } from "react";
@@ -15,7 +15,8 @@ const services = [
     image: Fruit,
     bgColor: "bg-[#263C28]",
     title: "Diverse Product Portfolio",
-    description: "We handle a wide range of processed agricultural products.",
+    description:
+      "We handle a wide range of raw and processed agricultural products.",
   },
   {
     image: Chart,

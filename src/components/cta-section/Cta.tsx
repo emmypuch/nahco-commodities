@@ -1,5 +1,5 @@
 import "./Cta.css";
-import TrustImg from "../../assets/svg/trust-img.svg";
+import TrustImg from "../../assets/svg/Contents.svg";
 import Email from "../../assets/svg/email.svg";
 import Twitter from "../../assets/svg/twitter.svg";
 import Instagram from "../../assets/svg/instagram.svg";

@@ -2,7 +2,7 @@ import "./Partnership.css";
 import PartnershipImage from "../../assets/svg/partnerimg.svg";
 import PLC from "../../assets/svg/plc.svg";
 import FTZ from "../../assets/svg/ftz.svg";
-import Logistics from "../../assets/svg/partner-logistics.svg";
+import Logistics from "../../assets/svg/management.svg";
 import Commodities from "../../assets/svg/commodities.svg";
 import Herovector from "../../assets/svg/hero-vector.svg";
 import TrustLine from "../../assets/svg/trust-line.svg";

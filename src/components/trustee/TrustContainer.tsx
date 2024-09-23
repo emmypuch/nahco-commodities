@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import TrustImg from "../../assets/svg/trust-img.svg";
+import TrustImg from "../../assets/svg/Contents.svg";
 import TrustLine from "../../assets/svg/trust-line.svg";
 import "./TrustContainer.css";
 

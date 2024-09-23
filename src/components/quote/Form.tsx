@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import GroundnutImg from "../../assets/svg/groundnut.svg";
 import BeansImg from "../../assets/svg/form-beans.svg";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import countries from "../../assets/data/countries.json";
 
 const Form = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-in-element");
 
@@ -36,11 +39,21 @@ const Form = () => {
     companyName: "",
     phoneNumber: "",
     message: "",
-    countryCode: "",
+    countryCode: "NG",
+    product: "",
+    quantity: "",
+    destination: "",
+    shippingMethod: "",
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleChange = (e: any) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -48,18 +61,92 @@ const Form = () => {
     });
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleCountryChange = (e: any) => {
-    const { value } = e.target;
-    setFormData({
-      ...formData,
-      countryCode: value,
-    });
+  const updateCountryCode = (phoneNumber: string) => {
+    const numberWithoutPlus = phoneNumber.replace(/^\+/, "");
+    const selectedCountry = countries.find((country) =>
+      numberWithoutPlus.startsWith(country.dial_code.replace("+", ""))
+    );
+
+    if (selectedCountry) {
+      setFormData((prevData) => ({
+        ...prevData,
+        countryCode: selectedCountry.dial_code,
+      }));
+    }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleSubmit = (e: any) => {
+  const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedCountry = countries.find(
+      (country) => country.code === e.target.value
+    );
+
+    if (selectedCountry) {
+      setFormData((prevData) => ({
+        ...prevData,
+        countryCode: selectedCountry.dial_code,
+      }));
+    } else {
+      console.error("Country not found");
+    }
+  };
+
+  const validateForm = (): boolean => {
+    const { firstName, lastName, email, phoneNumber, quantity } = formData;
+
+    if (!firstName || !lastName || !email || !phoneNumber || !quantity) {
+      setError("Please fill in all required fields.");
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!/^\+?\d{1,15}$/.test(phoneNumber)) {
+      setError("Please enter a valid phone number.");
+      return false;
+    }
+
+    const quantityNumber = parseFloat(quantity);
+    if (isNaN(quantityNumber) || quantityNumber < 112) {
+      setError("Quantity must be a number and at least 112.");
+      return false;
+    }
+
+    setError(null);
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
+    if (!validateForm()) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.greenbaq.ai/nahco/quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit. Please try again.");
+      }
+
+      navigate("/inquiry");
+    } catch (error) {
+      setError((error as Error).message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -74,6 +161,9 @@ const Form = () => {
               Your privacy is our priority. We only use your information to
               provide your quote
             </p>
+
+            {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+
             <div className="flex flex-col md:grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
@@ -85,7 +175,7 @@ const Form = () => {
                   placeholder="Enter your first name"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className="mt-1 p-2 block  w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
+                  className="mt-1 p-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
                   required
                 />
               </div>
@@ -106,7 +196,7 @@ const Form = () => {
             </div>
 
             <div className="mb-6">
-              <label className="block text-[#111827]   text-[12px] md:text-[14px] font-[500]">
+              <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                 Email
               </label>
               <input
@@ -115,13 +205,13 @@ const Form = () => {
                 placeholder="example@email.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 p-2 block w-full  text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
+                className="mt-1 p-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
                 required
               />
             </div>
 
             <div className="mb-6">
-              <label className="block  text-[#111827] text-[14px] font-[500]">
+              <label className="block text-[#111827] text-[14px] font-[500]">
                 Company Name
               </label>
               <input
@@ -130,12 +220,12 @@ const Form = () => {
                 placeholder="Enter your company name"
                 value={formData.companyName}
                 onChange={handleChange}
-                className="mt-1 p-2 block w-full   text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
+                className="mt-1 p-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
               />
             </div>
 
             <div className="mb-6">
-              <label className="block text-[#111827]   text-[12px] md:text-[14px] font-[500]">
+              <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                 Phone Number
               </label>
               <div className="relative">
@@ -143,22 +233,25 @@ const Form = () => {
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={handleCountryChange}
-                  className="absolute inset-y-0 left-0  border-[#D1D5DB] text-[#6B7280] bg-white rounded-l z-10"
+                  className="absolute inset-y-0 left-0 border-[#D1D5DB] text-[#6B7280] bg-white rounded-l z-10"
                 >
-                  <option value="NG" data-flag="🇳🇬">
-                    🇳🇬 NG
-                  </option>
-                  <option value="US" data-flag="🇺🇸">
-                    🇺🇸 US
-                  </option>
+                  {countries.map((country) => (
+                    <option key={country.code} value={country.code}>
+                      {country.flag} {country.dial_code}
+                    </option>
+                  ))}
                 </select>
+
                 <input
                   type="tel"
                   name="phoneNumber"
                   placeholder="+234 201-555-0123"
                   value={formData.phoneNumber}
-                  onChange={handleChange}
-                  className="pl-16 pr-3 py-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
+                  onChange={(e) => {
+                    handleChange(e);
+                    updateCountryCode(e.target.value);
+                  }}
+                  className="pl-[8rem] pr-3 py-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
                   required
                 />
               </div>
@@ -185,49 +278,46 @@ const Form = () => {
               </div>
 
               <div>
-                <label className="block text-[#111827] text-[11px] md:text-[14px] font-[500]">
+                <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                   Quantity (112MT Minimum)
                 </label>
                 <input
                   type="text"
                   name="quantity"
                   placeholder="1200 Metric Tonnes"
-                  value={formData.lastName}
+                  value={formData.quantity}
                   onChange={handleChange}
-                  className="mt-1 p-2 block w-full   text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
+                  className="mt-1 p-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
                   required
                 />
               </div>
             </div>
 
             <div className="mb-6">
-              <label className="block text-[#111827]  text-[12px] md:text-[14px] font-[500]">
+              <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
                 Destination
               </label>
               <input
                 type="text"
                 name="destination"
-                placeholder="Select Location"
-                value={formData.phoneNumber}
+                placeholder="Enter destination"
+                value={formData.destination}
                 onChange={handleChange}
-                className="mt-1 p-2 block w-full   text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
-                required
+                className="mt-1 p-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
               />
             </div>
 
             <div className="mb-6">
               <label className="block text-[#111827] text-[12px] md:text-[14px] font-[500]">
-                Desired Shipping Method
+                Shipping Method
               </label>
               <select
-                name="destination"
+                name="shippingMethod"
+                value={formData.shippingMethod}
                 onChange={handleChange}
                 className="mt-1 p-2 block w-full text-[#6B7280] text-[12px] md:text-[14px] font-[400] border-b-2 border-[#D1D5DB] focus:outline-none"
-                required
               >
-                <option value="" disabled>
-                  Select Method
-                </option>
+                <option value="">Select method</option>
                 <option value="air">Air</option>
                 <option value="sea">Sea</option>
                 <option value="land">Land</option>
@@ -243,22 +333,32 @@ const Form = () => {
                 placeholder="Your message"
                 value={formData.message}
                 onChange={handleChange}
-                className="mt-1 p-2 block w-full h-[179px]  text-[#6B7280] text-[12px] md:text-[14px] font-[400] border border-[#D1D5DB] focus:outline-none"
+                className="mt-1 p-2 block w-full h-[179px] text-[#6B7280] text-[12px] md:text-[14px] font-[400] border border-[#D1D5DB] focus:outline-none"
               />
             </div>
 
-            <Link
-              to="/inquiry"
-              type="submit"
-              className="bg-[#263C28] font-[500] text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition"
-            >
-              Request a Quote
-            </Link>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-[#263C28] font-[500] text-white py-2 px-4 w-full rounded-full hover:bg-[#111827] transition disabled:bg-gray-400"
+              >
+                {isSubmitting ? "Submitting..." : "Request a Quote"}
+              </button>
+            </div>
           </form>
         </div>
-        <div className="quote-img hidden md:block">
-          <img src={GroundnutImg} alt="" className="w-[400px]" />
-          <img src={BeansImg} alt="" className="w-[400px] mt-4" />
+        <div>
+          <img
+            src={BeansImg}
+            alt="Beans"
+            className="hidden md:block fade-in-element"
+          />
+          <img
+            src={GroundnutImg}
+            alt="Groundnut"
+            className="hidden md:block fade-in-element"
+          />
         </div>
       </div>
     </>

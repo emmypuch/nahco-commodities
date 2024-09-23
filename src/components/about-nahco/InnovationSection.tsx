@@ -84,12 +84,6 @@ const InnovationSection = () => {
                 Integrating innovative technology and data-driven insights
               </h2>
               <p className="text-[#667085] text-[14px] fade-in-element md:text-[16px] font-[400] mt-6 md:mt-4 md:text-center text-justify">
-                {/* At NAHCO Commodities, we have refined the index insurance model to address
-                the specific needs and challenges faced by smallholder farmers
-                in emerging markets. Our approach integrates innovative
-                technology and data-driven insights to deliver accessible,
-                affordable, and effective insurance solutions. Here's how we
-                implement index insurance through our platform: */}
                 At NAHCO Commodities, our approach integrates innovative
                 technology and data-driven insights to deliver accessible, and
                 effective export solutions for agro-commodities.
