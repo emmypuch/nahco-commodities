@@ -68,7 +68,9 @@ const Metric = () => {
                   subtitle="(Tonnes/Month)"
                   value="1500"
                 />
-                <MetricItem title="Export Value" subtitle="($)" value="5M" />
+                <div className="mr-[25px] md:mr-0">
+                  <MetricItem title="Export Value" subtitle="($)" value="$5M" />
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row justify-between gap-6 mt-3 md:mt-6">
                 <MetricItem

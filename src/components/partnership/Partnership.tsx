@@ -3,7 +3,7 @@ import PartnershipImage from "../../assets/svg/partnerimg.svg";
 import PLC from "../../assets/svg/plc.svg";
 import FTZ from "../../assets/svg/ftz.svg";
 import Logistics from "../../assets/svg/management.svg";
-import Commodities from "../../assets/svg/commodities.svg";
+import Commodities from "../../assets/svg/nahco-logistics.svg";
 import Herovector from "../../assets/svg/hero-vector.svg";
 import TrustLine from "../../assets/svg/trust-line.svg";
 import { useEffect } from "react";
@@ -72,12 +72,12 @@ const Partnership = () => {
                 </Link>
               </div>
               <div className="commodity-img absolute md:left-[95px]">
-                <Link to="https://www.nahcoaviance.com/aboutnms/">
+                <Link to="https://mainlandcargooptions.com/">
                   <img src={Commodities} alt="" className=" mt-[20px]" />
                 </Link>
               </div>
               <div className="logistics-img relative md:left-[130px] mt-[20px]">
-                <Link to="https://mainlandcargooptions.com/">
+                <Link to="https://www.nahcoaviance.com/aboutnms/">
                   <img src={Logistics} alt="" className="" />
                 </Link>
               </div>
