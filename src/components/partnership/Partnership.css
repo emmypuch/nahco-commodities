@@ -58,7 +58,6 @@ div.container-partnership {
     justify-content: center;
 }
 
-/* Fade-in transition */
 .fade-in-element {
     opacity: 0;
     transform: translateY(20px);
