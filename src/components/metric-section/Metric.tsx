@@ -123,7 +123,7 @@ const Metric = () => {
                       (%)
                     </p>
                     <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
-                      98
+                      98%
                     </h2>
                   </div>
                 </div>
