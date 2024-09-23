@@ -14,6 +14,14 @@ h2 {
     justify-content: space-between;
 }
 
+.metric-card-bg {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.metric-card-bg:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
 .fade-in-element {
     opacity: 0;
     transform: translateY(20px);
@@ -58,6 +66,7 @@ h2 {
         }
 }
 
+/* General styles for Safari and iPhone 14 Pro Max */
 @media screen and (max-width: 425px) {
     div.metric-content-card {
         display: flex;
@@ -72,14 +81,44 @@ h2 {
     }
 }
 
+/* Specific for Safari and iPhone screen sizes */
+@media screen and (max-width: 393px) {
+    div.metric-card-bg {
+        width: 340px;
+    }
+}
+
+/* For iPhone 14 Pro Max, Safari, and small screens (375px and below) */
 @media screen and (max-width: 375px) {
     div.metric-card-bg {
         width: 300px;
     }
+
+    /* Safari-specific flexbox fix */
+    @supports (-webkit-touch-callout: none) {
+        div.metric-content-card {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    }
 }
 
+/* Very small screens, like iPhone SE or small Safari browsers (320px) */
 @media screen and (max-width: 320px) {
     div.metric-card-bg {
         width: 250px;
+    }
+
+    div.metric-content-card {
+        margin-top: 10px;
+    }
+
+    .numbers-container {
+        padding: 0 10px;
     }
 }

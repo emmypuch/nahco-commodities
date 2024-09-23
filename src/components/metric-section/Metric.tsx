@@ -1,6 +1,54 @@
-import "./Metric.css";
+import React, { useEffect } from "react";
 import GroundnutImage from "../../assets/svg/metric-groundnut.svg";
-import { useEffect } from "react";
+import "./Metric.css";
+
+interface MetricCardProps {
+  title: string;
+  subtitle: string;
+  targetValue: number;
+  format: (value: number) => string;
+}
+
+const MetricCard: React.FC<MetricCardProps> = ({
+  title,
+  subtitle,
+  targetValue,
+  format,
+}) => {
+  const [currentValue, setCurrentValue] = React.useState(0);
+
+  useEffect(() => {
+    const duration = 2000;
+    const increment = (targetValue / duration) * 10;
+
+    const interval = setInterval(() => {
+      setCurrentValue((prev) => {
+        if (prev < targetValue) {
+          return prev + increment;
+        } else {
+          clearInterval(interval);
+          return targetValue;
+        }
+      });
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, [targetValue]);
+
+  return (
+    <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
+      <p className="text-[#3B6D3E] text-center font-[500] text-[14px] md:text-[18px] mt-2">
+        {title}
+      </p>
+      <p className="text-[#3B6D3E] text-center font-[500] text-[14px] md:text-[18px] mt-2">
+        {subtitle}
+      </p>
+      <h2 className="text-[#3B6D3E] text-center font-[600] text-[24px] md:text-[36px] mt-4">
+        {format ? format(currentValue) : Math.floor(currentValue)}
+      </h2>
+    </div>
+  );
+};
 
 const Metric = () => {
   useEffect(() => {
@@ -26,6 +74,11 @@ const Metric = () => {
     };
   }, []);
 
+  const formatValue = (val: number): string => {
+    if (val >= 1000000) return `${(val / 1000000).toFixed(1)}M`;
+    return Math.floor(val).toString();
+  };
+
   return (
     <div className="px-[20px] md:px-[50px] pt-[20px] md:pt-[40px]">
       <div className="fade-in-element">
@@ -34,101 +87,67 @@ const Metric = () => {
         </h2>
         <p className="text-center font-[400] text-[14px] md:text-[20px] text-[#4B5563] mt-6">
           By tracking these metrics, we demonstrate our commitment to
-          accountability, <br /> effectiveness, and driving positive change in
-          the global marketplace.
+          accountability, <br />
+          effectiveness, and driving positive change in the global marketplace.
         </p>
       </div>
+
       <div className="flex justify-center items-center min-h-[70vh] md:min-h-screen">
         <div className="metric-card fade-in-element p-4 md:p-[24px]">
           <div className="metric-content flex flex-col md:flex-row justify-between gap-[40px]">
             <div className="numbers-container fade-in-element">
-              <div className="metric-content-card mt-0 md:mt-4 flex flex-row justify-between gap-4">
-                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
-                  <div className="">
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      Export Volume
-                    </p>
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      (Tonnes/Month)
-                    </p>
-                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
-                      1500
-                    </h2>
-                  </div>
-                </div>
-                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
-                  <div className="">
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      Export Value
-                    </p>
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      ($)
-                    </p>
-                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
-                      5M
-                    </h2>
-                  </div>
-                </div>
+              <div className="metric-content-card mt-0 md:mt-0 flex flex-row justify-between gap-4">
+                <MetricCard
+                  title="Export Volume"
+                  subtitle="(Tonnes/Month)"
+                  targetValue={1500}
+                  format={formatValue}
+                />
+                <MetricCard
+                  title="Export Value"
+                  subtitle="($)"
+                  targetValue={5000000}
+                  format={formatValue}
+                />
               </div>
 
-              <div className="metric-content-card flex fade-in-element flex-col md:flex md:flex-row justify-between gap-4 mt-4">
-                <div className="metric-card-bg bg-white shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
-                  <div className="">
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      Logistics Efficiency
-                    </p>
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      (Days/Shipment)
-                    </p>
-                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
-                      8
-                    </h2>
-                  </div>
-                </div>
-                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
-                  <div className="">
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      Processing Efficiency
-                    </p>
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      (Units/Hour)
-                    </p>
-                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
-                      100
-                    </h2>
-                  </div>
-                </div>
+              <div className="metric-content-card flex fade-in-element flex-col md:flex-row justify-between gap-4 mt-4">
+                <MetricCard
+                  title="Logistics Efficiency"
+                  subtitle="(Days/Shipment)"
+                  targetValue={8}
+                  format={formatValue}
+                />
+                <MetricCard
+                  title="Processing Efficiency"
+                  subtitle="(Units/Hour)"
+                  targetValue={100}
+                  format={formatValue}
+                />
               </div>
 
-              <div className="metric-content-card flex flex-col fade-in-element md:flex md:flex-row justify-between gap-4 mt-4">
-                <div className="metric-card-bg bg-white shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
-                  <div className="">
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      Employee Productivity
-                    </p>
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      (Units/Day)
-                    </p>
-                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
-                      50
-                    </h2>
-                  </div>
-                </div>
-                <div className="metric-card-bg bg-white fade-in-element shadow-lg border border-[#E5E7EB] rounded-[24px] w-[248px] px-[20px] py-[15px] h-full">
-                  <div className="">
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      Order Fulfillment Rate
-                    </p>
-                    <p className="text-[#3B6D3E] font-[500] text-[14px] md:text-[18px] mt-2">
-                      (%)
-                    </p>
-                    <h2 className="text-[#3B6D3E] font-[600] text-[24px] md:text-[36px] mt-4">
-                      98%
-                    </h2>
-                  </div>
-                </div>
+              <div className="metric-content-card flex flex-col fade-in-element md:flex-row justify-between gap-4 mt-4">
+                <MetricCard
+                  title="Employee Productivity"
+                  subtitle="(Units/Day)"
+                  targetValue={50}
+                  format={formatValue}
+                />
+                {/* <MetricCard
+                  title="Order Fulfillment Rate"
+                  subtitle="(%)"
+                  targetValue={98}
+                  format={(value) => `${value}%`}
+                /> */}
+                <MetricCard
+                  title="Order Fulfillment Rate"
+                  subtitle="(%)"
+                  targetValue={98}
+                  format={formatValue}
+                />
               </div>
             </div>
+
             <div className="metric-img fade-in-element mt-6 md:mt-0">
               <img src={GroundnutImage} alt="Metric" />
             </div>
