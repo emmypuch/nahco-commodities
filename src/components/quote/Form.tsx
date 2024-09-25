@@ -348,16 +348,16 @@ const Form = () => {
             </div>
           </form>
         </div>
-        <div>
+        <div className="mt-[30px]">
           <img
             src={BeansImg}
             alt="Beans"
-            className="hidden md:block fade-in-element"
+            className="hidden md:block h-[300px] fade-in-element"
           />
           <img
             src={GroundnutImg}
             alt="Groundnut"
-            className="hidden md:block fade-in-element"
+            className="hidden md:block mt-[10px] h-[300px] fade-in-element"
           />
         </div>
       </div>
