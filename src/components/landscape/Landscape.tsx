@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import "./Landscape.css";
 
 const regions = [
@@ -48,6 +49,14 @@ const Landscape = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Landscape - Nahco Commodities</title> {/* Set the title */}
+        <meta
+          name="description"
+          content="Explore various global regions and discover how we connect you with consumers seeking high-quality Nigerian agricultural products."
+        />{" "}
+        {/* Set the meta description */}
+      </Helmet>
       <div className="px-[20px] md:px-[70px] py-[50px]">
         <h2 className="text-[#166534] font-[600] text-[28px] fade-in-element md:text-[36px] text-center">
           From bustling urban hubs to remote rural <br /> landscapes
