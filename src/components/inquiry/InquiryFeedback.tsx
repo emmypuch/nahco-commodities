@@ -3,6 +3,7 @@ import "./InquiryFeedback.css";
 import Check from "../../assets/svg/check.svg";
 import SuccessCheck from "../../assets/svg/success-check.svg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const InquiryFeedback = () => {
   useEffect(() => {
@@ -38,6 +39,18 @@ const InquiryFeedback = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Inquiry Feedback - Nahco Commodities</title>
+        <meta
+          name="description"
+          content="Thank you for your inquiry. We've received your quote request and will process it as soon as possible."
+        />
+        <meta
+          name="keywords"
+          content="inquiry, feedback, quote request, Nahco Commodities"
+        />
+      </Helmet>
+
       <div className="bg-[#FBFAF9] px-[20px] md:px-[50px] py-[30px] min-h-screen flex items-center justify-center">
         <div className="feedback-card bg-[#fff] rounded-[24px] h-[692px] w-[1200px] flex flex-col justify-center items-center p-8">
           <div className="flex justify-center items-center mb-4">

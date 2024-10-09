@@ -1,9 +1,22 @@
+import { Helmet } from "react-helmet-async";
 import TeamBio from "./TeamBio";
 import "./NahcoTeam.css";
 
 const NahcoTeam = () => {
   return (
     <>
+      <Helmet>
+        <title>Our Team - Nahco Commodities</title>
+        <meta
+          name="description"
+          content="Meet our experienced team dedicated to delivering exceptional results for your business."
+        />{" "}
+        <meta
+          name="keywords"
+          content="team, professionals, Nahco Commodities, exceptional results"
+        />{" "}
+      </Helmet>
+
       <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[30px]">
         <div className="text-center flex flex-col items-center">
           <h2 className="text-[#E4CAA4] text-[28px] md:text-[36px] font-[600]">

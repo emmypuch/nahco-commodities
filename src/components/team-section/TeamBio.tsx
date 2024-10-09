@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import teamMember from "../../types/teamMember";
 
 const TeamBio = () => {
   return (
     <>
+      <Helmet>
+        <title>Meet Our Team - Nahco Commodities</title>
+        <meta
+          name="description"
+          content="Discover the talented members of our team at Nahco Commodities. Learn about their skills and contributions."
+        />
+      </Helmet>
+
       <div className="team-wrapper flex gap-6 justify-center mt-[40px]">
         {teamMember.slice(0, 3).map((member, index) => (
           <div key={index}>

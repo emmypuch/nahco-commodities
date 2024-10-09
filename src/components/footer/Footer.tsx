@@ -4,6 +4,7 @@ import NahcoLogo from "../../assets/svg/nahco-logo.svg";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Newsletter from "./newsletter/Newsletter";
+import { Helmet } from "react-helmet-async"; // Import Helmet
 import "./Footer.css";
 
 interface Link {
@@ -111,6 +112,19 @@ const Footer: React.FC = () => {
 
   return (
     <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[30px]">
+      {/* Add Helmet here */}
+      <Helmet>
+        <title>Nahco Commodities Footer</title>
+        <meta
+          name="description"
+          content="Footer of Nahco Commodities website, providing links to services, privacy policy, and social media."
+        />
+        <meta
+          name="keywords"
+          content="Nahco, Commodities, Footer, Contact, About Us, Social Media"
+        />
+      </Helmet>
+
       <div className="newsletter flex justify-center items-center w-full">
         <div className="relative footer-overlay w-full max-w-[1440px]">
           <img

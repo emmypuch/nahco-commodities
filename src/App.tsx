@@ -10,10 +10,11 @@ import ScrollToTopButton from "./components/scroll-button/ScrollToTopButton";
 import Team from "./pages/team-section/Team";
 import TeamBioDetail from "./pages/team-section/TeamBioDetail";
 import PrivacyPage from "./pages/privacy-section/PrivacyPage";
+import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   return (
-    <>
+    <HelmetProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -28,7 +29,7 @@ const App = () => {
       </Routes>
 
       <ScrollToTopButton />
-    </>
+    </HelmetProvider>
   );
 };
 

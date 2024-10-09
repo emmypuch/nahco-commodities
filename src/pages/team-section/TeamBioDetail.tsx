@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import teamMember from "../../types/teamMember";
 import BackBtn from "../../components/buttons/back-button/BackBtn";
 import Footer from "../../components/footer/Footer";
@@ -14,6 +15,20 @@ const TeamBioDetail = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{`${member.name} - Team Member at Nahco Commodities`}</title>
+        <meta
+          name="description"
+          content={`Learn more about ${member.name}, our ${member.title}, at Nahco Commodities.`}
+        />
+        <meta
+          property="og:title"
+          content={`${member.name} - Nahco Commodities Team`}
+        />
+        <meta property="og:description" content={member.bio[0]} />
+        <meta property="og:image" content={member.image} />
+      </Helmet>
+
       <Header />
       <div className="bg-[#263C28] px-[20px] md:px-[50px] py-[50px]">
         <BackBtn />
